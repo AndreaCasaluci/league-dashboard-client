@@ -1,0 +1,233 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    flex-direction: column; /* Imposta il layout a colonna */
+    height: 100%; /* Imposta l'altezza al 100% per coprire l'intera altezza della pagina */
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 5px 5px #222222e6;
+  }
+  
+  .navbar:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 7px 6px #222222e6;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    flex: 1; /* Flessibile, occupa lo spazio rimanente */
+    display: flex;
+    flex-direction: column; /* Imposta il layout a colonna per gli elementi della lista */
+  }
+  
+  /* .logo {
+    padding-left: 10px;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 24px; 
+    color: #ffffff;
+  } */
+
+  .logo {
+    margin:0 auto;
+    padding:2px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    vertical-align: middle;
+  }
+
+  
+  .logo:hover {
+    transition: 0.2s;
+    /* transform: translateY(-3px); */
+    /* background-color: #5b5a5a; */
+    box-shadow: 0px 0px 10px 8px #222222e6;
+  }
+
+
+
+  span.custom-text {
+    font-size: 24px; /* Dimensione generale del testo */
+    
+  }
+  
+  .first-letter {
+    font-size: 28px; /* Dimensione più grande per la prima lettera */
+    color: aquamarine; /* Colore diverso per la prima lettera */
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 20px;
+    display: flex;
+    border-radius: 5px; /* Bordo leggermente arrotondato */
+    align-items: center; /* Allinea l'icona verticalmente */
+    color: #f3f3f3; /* Colore predefinito del testo */
+    position: relative; /* Posizione relativa per il posizionamento del sub-menu */
+  }
+  
+  /* Evidenzia il pulsante al passaggio del mouse */
+  .nav-links li:hover {
+    transition: 0.2s;
+    background-color: #f0f0f0; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #000; /* Cambia il colore del testo al passaggio del mouse */
+    box-shadow: 0px 0px 4px 6px #222222e6;
+  }
+  
+  /* Stile del sub-menu */
+  .sub-menu {
+    text-align: left;
+    position: absolute;
+    overflow:visible;
+    width: 85%;
+    padding: 5%;
+    top: 100%;
+    left: 20%;
+    background-color: #333;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0px 0px 10px 5px #222222e6;
+  }
+  
+
+  .sub-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sub-menu li {
+    font-size: 14px; /* Modifica la dimensione del testo */
+    color: #fff; /* Modifica il colore del testo */
+    margin: 5px 0; /* Aggiungi spazio tra gli elementi */
+    padding:5px;
+  }
+  
+  .sub-menu li:hover {
+    transition: 0.2s;
+    background-color: #555; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+    box-shadow: 0px 0px 10px 5px #222222e6;
+  }
+
+  .sub-menu .sub-fa-icon{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+
+
+  /* Visualizza il sub-menu quando il mouse è sopra il pulsante */
+  .nav-links li:hover .sub-menu {
+    display: block;
+  }
+  
+  .nav-links li.active {
+    font-weight: bold; /* Testo in grassetto */
+    background-color: #f0f0f0; /* Sfondo evidenziato */
+  }
+  
+  .nav-links li .fa-icon {
+    margin-right: 8px; /* Aggiunge spazio tra l'icona e il testo */
+    width: 20px;
+    height: 20px;
+    padding-bottom: 1px;
+  }
+  
+  /* Contenuto principale */
+  .content {
+    margin-left: 250px; /* Larghezza della navbar */
+    padding: 20px;
+  }
+  
+  .navbar-container {
+    position: relative;
+  }
+  
+  .attribution {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    display: flex; /* Utilizza un layout flessibile */
+    align-items: center; /* Allinea verticalmente al centro */
+    justify-content: space-between; /* Spazio tra i contenuti */
+    background-color: #474747; /* Sfondo scuro */
+    border-radius: 5px;
+    color: #fff; /* Testo bianco */
+    padding: 8px; /* Spazio interno */
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px 3px #222222e6;
+  }
+  
+  .attribution:hover {
+    transition: 0.2s;
+    transform: translateY(-3px);
+    background-color: #5b5a5a;
+    box-shadow: 0px 0px 10px 8px #222222e6;
+  }
+  
+  .attribution-text {
+    flex: 1; /* Espande il contenuto su tutta la larghezza disponibile */
+    padding-bottom: 5px;
+  }
+  
+  .attribution-text p {
+    margin: 0; /* Rimuove il margine predefinito */
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+  }
+  
+  .discord-link {
+    text-align: center;
+    color:white;
+    /* background-color: #637acc; */
+    background-color: #6e78f7;
+    padding:5px;
+    border-radius: 3px;
+    /* color: #7289DA; */ /* Colore del link Discord */
+    text-decoration: none;
+  }
+
+  .discord-box {
+    flex:1;
+    align-items: center;
+    color: #ccc;
+    background-color: #7289DA;
+    border-radius: 3px;
+    width: 80%;
+    
+  }
+  
+  .bottomLogo {
+    width: 80px;
+    height: 80px;
+    margin-right: 2px;
+  }
+
+  .real-logo{
+    width: 250px;
+    height: 250px;
+    
+  }
+  

@@ -1,0 +1,129 @@
+.add-match-box {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  margin: 0 auto;
+  max-width: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.add-match-box h3{
+    margin:0 auto;
+    padding:0;
+}
+
+.player-list {
+    list-style: none; /* Rimuovi i punti elenco */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .player-list li {
+    margin-bottom: 5px; /* Spaziatura tra i giocatori */
+    /* Aggiungi ulteriori stili desiderati per ciascun giocatore */
+    background-color: #ccc;
+    text-align: center;
+    border-radius: 5px;
+    color: #333;
+    max-height: 14px;
+    font-size: 12px;
+  }
+
+.custom-select {
+    padding-top: 0; /* Rimuovi il margine superiore */
+  }
+
+
+.team-box{
+    padding-top: 10px;
+    display: flex;
+    gap:40px;
+}
+
+.react-select__control {
+    padding: 0;
+    margin: 0;
+  }
+  
+
+
+.add-match-box:hover {
+  transition: 0.2s;
+  box-shadow: 0px 0px 12px 7px #222222e6;
+}
+
+.add-match-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.add-match-box h3:hover {
+  transition: 0.2s;
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  background-color: #5b5a5a;
+}
+
+.add-match-box div {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.add-match-box label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-match-box select,
+.add-match-box input[type="number"],
+.add-match-box input[type="text"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-match-box select {
+  width: 100%;
+}
+
+.add-match-box button {
+  background-color: #6e78f7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.add-match-box button:hover {
+  background-color: #0056b3;
+}
+
+.add-match-box .fa-icon {
+    margin: 0 auto;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+  
+.add-match-box .fa-icon2 {
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    padding-left: 1px;
+    vertical-align: middle;
+  }

@@ -1,0 +1,126 @@
+/* TeamOfTheWeekPage.css */
+
+.team-of-the-week-page {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    background-color: #333;
+  }
+  
+  .week-selector {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* Allinea il selettore a destra */
+    margin-right: 10px;
+  }
+  
+  .week-selector label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .week-selector select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .team-of-the-week-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 28px;
+    background: #333;
+    width: 760px;
+    height: 400px;
+    flex-shrink: 0;
+    /* padding-top: 126px; */
+    padding-top: auto;
+    padding-bottom: auto;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px #222222e6;
+  }
+
+  .team-of-the-week-cards-container:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 12px 7px #222222e6;
+  }
+
+  .team-of-the-week-title{
+    color:white;
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    margin:0;
+    margin-bottom: 10px;
+  }
+  
+  .team-of-the-week-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .title-header {
+    color: #ccc;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .team-of-the-week-page .title-text {
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #333333;
+    box-shadow: 0px 0px 6px 4px #222222e6;
+    margin: auto;
+    width: auto;
+    color: white;
+    min-width: 400px;
+  }
+  
+  .team-of-the-week-page .title-text:hover {
+    transition: 0.2s;
+    background-color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px 5px #222222e6;
+    color: white;
+  }
+  
+  .team-of-the-week-page .fa-icon2 {
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    padding-top: 5px;
+  }
+
+  .team-of-the-week-page .title-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+  }
+  

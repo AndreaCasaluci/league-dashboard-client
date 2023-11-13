@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    align-items: center; /* Allinea al centro orizzontalmente */
+    justify-content: center; /* Allinea al centro verticalmente */
+    gap: 20px; /* Aggiunge spazio tra i componenti */
+  }
+  
+  /* Stili per i componenti (AddPlayerBox e AddTeamBox) */
+  /* Aggiungi stili personalizzati secondo le tue esigenze */
+  

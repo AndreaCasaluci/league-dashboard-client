@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* styles.css */
+
+Leaderboard {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+/* styles.css */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Aggiungi un po' di spazio tra le celle */
+th, td {
+  padding: 12px;
+}
+
+/* Stile dell'intestazione */
+th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+/* Stile delle righe dispari */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Stile delle righe pari */
+tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+/* Stile delle celle del corpo della tabella */
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Hover sottolineato per le righe */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Stile per le intestazioni delle colonne */
+th, td {
+  border: 1px solid #ddd;
+}
+
+/* Rendi il testo in grassetto per l'intestazione della colonna */
+th {
+  font-weight: bold;
+}
+
+/* Stile per le righe alternate */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+h1{
+  text-align: center;
+}
