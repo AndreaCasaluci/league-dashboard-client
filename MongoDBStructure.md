@@ -4,13 +4,6 @@ DB Name: "league".
 
 ## Collections:
 
-
-# MongoDB Collections Structure
-
-DB Name: "league".
-
-## Collections:
-
 - "adminAccounts": used to login and access to Admin Panel
   ```
     username: OctopusPrime
