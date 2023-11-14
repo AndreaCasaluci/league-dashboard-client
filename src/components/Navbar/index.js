@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFutbol, faTrophy, faHandshake, faMitten, faPersonRunning, faPeopleGroup, faRankingStar, faHouse, faCalendarDays, faScrewdriverWrench, faAward } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
@@ -33,22 +33,22 @@ const Navbar = ({ setSection, activeSection }) => {
         </div>
         <ul className="nav-links">
           <li onClick={() => handleSectionChange('Home')} className={activeSection === 'Home' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faHouse} className="fa-icon"/>Home
+            <FontAwesomeIcon icon={faHouse} className="fa-icon" />Home
           </li>
           <li onClick={() => handleSectionChange('Teams')} className={activeSection === 'Teams' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faPeopleGroup} className="fa-icon"/>Teams
+            <FontAwesomeIcon icon={faPeopleGroup} className="fa-icon" />Teams
           </li>
           <li onClick={() => handleSectionChange('Players')} className={activeSection === 'Players' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faPersonRunning} className="fa-icon"/>Players
+            <FontAwesomeIcon icon={faPersonRunning} className="fa-icon" />Players
           </li>
           <li onClick={() => handleSectionChange('Fixtures')} className={activeSection === 'Fixtures' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faCalendarDays} className="fa-icon"/>Fixtures
+            <FontAwesomeIcon icon={faCalendarDays} className="fa-icon" />Fixtures
           </li>
           <li onClick={() => handleSectionChange('TOTW')} className={activeSection === 'TOTW' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faAward} className="fa-icon"/>Team Of The Week
+            <FontAwesomeIcon icon={faAward} className="fa-icon" />Team Of The Week
           </li>
           <li onClick={() => handleSectionChange('AdminPanel')} className={activeSection === 'AdminPanel' ? 'active' : ''}>
-            <FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon'/>Admin Panel
+            <FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon' />Admin Panel
           </li>
           <li onMouseEnter={showSubMenuOnHover}>
             <FontAwesomeIcon icon={faRankingStar} className="fa-icon" />
@@ -62,15 +62,15 @@ const Navbar = ({ setSection, activeSection }) => {
                     League Leaderboard
                   </li>
                   <li onClick={() => handleSectionChange('GoalLeaderboard')}>
-                    <FontAwesomeIcon icon={faFutbol} className="sub-fa-icon"/>
+                    <FontAwesomeIcon icon={faFutbol} className="sub-fa-icon" />
                     Goal Leaderboard
                   </li>
                   <li onClick={() => handleSectionChange('AssistLeaderboard')}>
-                    <FontAwesomeIcon icon={faHandshake} className="sub-fa-icon"/>
+                    <FontAwesomeIcon icon={faHandshake} className="sub-fa-icon" />
                     Assist Leaderboard
                   </li>
                   <li onClick={() => handleSectionChange('CleansheetLeaderboard')}>
-                    <FontAwesomeIcon icon={faMitten} className="sub-fa-icon"/>
+                    <FontAwesomeIcon icon={faMitten} className="sub-fa-icon" />
                     Cleansheet Leaderboard
                   </li>
                 </ul>
@@ -84,7 +84,7 @@ const Navbar = ({ setSection, activeSection }) => {
           <div className="attribution-text">
             <p>Powered by<br></br> (UN)COMPETITIVE FUTSAL</p>
             <a href="https://discord.com/invite/My6XSb4tS3" className="discord-link">
-              <FontAwesomeIcon icon={faDiscord} className="sub-fa-icon"/>Join our Discord
+              <FontAwesomeIcon icon={faDiscord} className="sub-fa-icon" />Join our Discord
             </a>
           </div>
         </div>

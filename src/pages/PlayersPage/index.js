@@ -1,10 +1,12 @@
 // PlayersPage.js
 import React, { useEffect, useState } from 'react';
-import PlayerCard from './PlayerCard'; // Assicurati che il percorso sia corretto
+import PlayerCard from '../../components/PlayerCard'; // Assicurati che il percorso sia corretto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonRunning, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import './PlayersPage.css'; // Importa il tuo file CSS se necessario
+import actions from '../../actions';
+
+import './index.css'; // Importa il tuo file CSS se necessario
 
 const PlayersPage = () => {
   const [players, setPlayers] = useState([]); // Assicurati di avere un array di giocatori
@@ -17,27 +19,15 @@ const PlayersPage = () => {
 
 
   useEffect(() => {
-    async function fetchPlayers() {
-      try {
-        const response = await fetch('http://localhost:5000/players');
-        if (response.ok) {
-          const data = await response.json();
-          setPlayers(data);
-        } else {
-          console.error('Errore nel recupero dei dati dei giocatori');
-        }
-      } catch (error) {
-        console.error('Errore nel recupero dei dati dei giocatori:', error);
-      }
-    }
 
-    fetchPlayers();
+    actions.fetchPlayers(setPlayers);
+
   }, []); // Assicurati di gestire correttamente l'effetto collaterale
 
   return (
     <div className="players-page">
       <div className='title-header'>
-      <h2 className='title-text'><FontAwesomeIcon icon={faPersonRunning} className="fa-icon2"/>CFL Players</h2>
+        <h2 className='title-text'><FontAwesomeIcon icon={faPersonRunning} className="fa-icon2" />CFL Players</h2>
       </div>
       <div className="search-bar">
         <FontAwesomeIcon icon={faSearch} className="search-icon" />

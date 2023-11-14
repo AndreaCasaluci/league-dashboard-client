@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faScrewdriverWrench, faLock } from '@fortawesome/free-solid-svg-icons';
 
 
-import './Login.css'; // Importa il file CSS per il tuo componente
+import './index.css'; // Importa il file CSS per il tuo componente
 
 const Login = ({ setIsLogged, setSection, setGlobalUsername }) => {
   const [username, setUsername] = useState('');
@@ -16,7 +16,7 @@ const Login = ({ setIsLogged, setSection, setGlobalUsername }) => {
         username,
         password,
       });
-  
+
       if (response.data.message === 'Autenticazione riuscita') {
         setIsLogged(true);
         setSection('AdminPanel');
@@ -33,11 +33,11 @@ const Login = ({ setIsLogged, setSection, setGlobalUsername }) => {
       }
     }
   };
-  
+
 
   return (
     <div className="login-container">
-      <h2><FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon'/>Admin Panel<FontAwesomeIcon icon={faLock} className='fa-icon2'/></h2>
+      <h2><FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon' />Admin Panel<FontAwesomeIcon icon={faLock} className='fa-icon2' /></h2>
       <div className="form-container">
         <input
           type="text"

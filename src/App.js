@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import LeagueLeaderboard from './LeagueLeaderboard';
-import Navbar from './Navbar';
-import GoalLeaderboard from './GoalLeaderboard';
-import AssistLeaderboard from './AssistLeaderboard';
-import CleansheetLeaderboard from './CleansheetLeaderboard';
-import Login from './Login';
-import AdminPanel from './AdminPanel';
-import PlayersPage from './PlayersPage';
+import LeagueLeaderboard from './pages/LeagueLeaderboard';
+import Navbar from './components/Navbar';
+import GoalLeaderboard from './pages/GoalLeaderboard';
+import AssistLeaderboard from './pages/AssistLeaderboard';
+import CleansheetLeaderboard from './pages/CleansheetLeaderboard';
+import Login from './pages/Login';
+import AdminPanel from './pages/AdminPanel';
+import PlayersPage from './pages/PlayersPage';
 
 import './App.css';
-import './Navbar.css';
-import './AddPlayerBox.css';
-import TeamsPage from './TeamsPage';
-import TeamOfTheWeekPage from './TeamOfTheWeekPage';
+/* import './Navbar.css'; */
+import './components/AddPlayerBox';
+import TeamsPage from './pages/TeamsPage';
+import TeamOfTheWeekPage from './pages/TeamOfTheWeekPage';
 
 function App() {
   const [section, setSection] = useState('Home');
@@ -34,7 +34,7 @@ function App() {
     async function fetchData() {
       try {
         if (section === 'Players') {
-          let url = "http://localhost:5000/players";  // Assicurati di avere la route corretta nel tuo backend
+          let url = "http://localhost:5000/player/players";  // Assicurati di avere la route corretta nel tuo backend
 
           const response = await fetch(url);
           if (response.ok) {
@@ -43,16 +43,16 @@ function App() {
           }
         }
         else if (section === 'LeagueLeaderboard') {
-          let url = "http://localhost:5000/leagueLeaderboard";
+          let url = "http://localhost:5000/leaderboard/league";
 
           const response = await fetch(url);
           if (response.ok) {
             const data = await response.json();
             setLeagueLeaderboardData(data);
           }
-        } 
-        else if(section ==='GoalLeaderboard') {
-          let url = "http://localhost:5000/goalLeaderboard";
+        }
+        else if (section === 'GoalLeaderboard') {
+          let url = "http://localhost:5000/leaderboard/goal";
 
           const response = await fetch(url);
           if (response.ok) {
@@ -60,8 +60,8 @@ function App() {
             setGoalLeaderboardData(data);
           }
         }
-        else if(section ==='AssistLeaderboard') {
-          let url = "http://localhost:5000/assistLeaderboard";
+        else if (section === 'AssistLeaderboard') {
+          let url = "http://localhost:5000/leaderboard/assist";
 
           const response = await fetch(url);
           if (response.ok) {
@@ -69,8 +69,8 @@ function App() {
             setAssistLeaderboardData(data);
           }
         }
-        else if(section ==='CleansheetLeaderboard') {
-          let url = "http://localhost:5000/cleansheetLeaderboard";
+        else if (section === 'CleansheetLeaderboard') {
+          let url = "http://localhost:5000/leaderboard/cleansheet";
 
           const response = await fetch(url);
           if (response.ok) {
@@ -78,14 +78,14 @@ function App() {
             setCleansheetLeaderboardData(data);
           }
         }
-        else if(section==='AdminPanel'){
-            if(!isLogged){
-                setSection('Login'); 
-                
-            }
-            else{
-                // Do whatever Admin Panel is
-            }
+        else if (section === 'AdminPanel') {
+          if (!isLogged) {
+            setSection('Login');
+
+          }
+          else {
+            // Do whatever Admin Panel is
+          }
         }
       } catch (error) {
         console.error('Errore nel recupero dei dati:', error);
@@ -111,10 +111,10 @@ function App() {
         ) : section === 'Teams' && !loading ? (
           <TeamsPage teams={playersData} />
         ) : null}
-         {section === 'TOTW' && loading ? (
+        {section === 'TOTW' && loading ? (
           <p>Loading...</p>
         ) : section === 'TOTW' && !loading ? (
-          <TeamOfTheWeekPage/>
+          <TeamOfTheWeekPage />
         ) : null}
         {section === 'LeagueLeaderboard' && loading ? (
           <p>Loading...</p>
@@ -141,13 +141,13 @@ function App() {
         ) : null}
 
         {section === 'Login' && (
-            <Login setIsLogged={setIsLogged} setSection={setSection} setGlobalUsername={setGlobalUsername}/>
+          <Login setIsLogged={setIsLogged} setSection={setSection} setGlobalUsername={setGlobalUsername} />
         )}
 
         {section === 'AdminPanel' && isLogged && (
           <>
-          <div className='admin-header'><div className='hello-text'>Hello, {globalUsername}</div></div>
-          <AdminPanel/>
+            <div className='admin-header'><div className='hello-text'>Hello, {globalUsername}</div></div>
+            <AdminPanel />
           </>
         )}
       </div>

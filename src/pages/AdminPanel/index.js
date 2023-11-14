@@ -1,8 +1,8 @@
 import React from 'react';
-import AddPlayerBox from './AddPlayerBox';
-import AddTeamBox from './AddTeamBox';
-import './AdminPanel.css';
-import AddMatchBox from './AddMatchBox';
+import AddPlayerBox from '../../components/AddPlayerBox';
+import AddTeamBox from '../../components/AddTeamBox';
+import './index.css';
+import AddMatchBox from '../../components/AddMatchBox';
 
 const AdminPanel = () => {
     return (

@@ -1,10 +1,10 @@
 // TeamsPage.js
 import React, { useEffect, useState } from 'react';
-import TeamCard from './TeamCard'; // Assicurati che il percorso sia corretto
+import TeamCard from '../../components/TeamCard'; // Assicurati che il percorso sia corretto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import './TeamsPage.css'; // Importa il tuo file CSS se necessario
+import './index.css'; // Importa il tuo file CSS se necessario
 
 const TeamsPage = () => {
   const [teams, setTeams] = useState([]); // Assicurati di avere un array di squadre
@@ -17,7 +17,7 @@ const TeamsPage = () => {
   useEffect(() => {
     async function fetchTeams() {
       try {
-        const response = await fetch('http://localhost:5000/teamsPage'); // Assicurati che l'endpoint del backend sia corretto
+        const response = await fetch('http://localhost:5000/team/teamsPage'); // Assicurati che l'endpoint del backend sia corretto
         if (response.ok) {
           const data = await response.json();
           setTeams(data);
@@ -35,7 +35,7 @@ const TeamsPage = () => {
   return (
     <div className="teams-page">
       <div className='title-header'>
-        <h2 className='title-text'><FontAwesomeIcon icon={faUsers} className="fa-icon2"/>CFL Teams</h2>
+        <h2 className='title-text'><FontAwesomeIcon icon={faUsers} className="fa-icon2" />CFL Teams</h2>
       </div>
       <div className="search-bar">
         <FontAwesomeIcon icon={faSearch} className="search-icon" />

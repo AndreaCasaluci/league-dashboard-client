@@ -1,0 +1,155 @@
+/* TeamCard.css */
+
+.team-card {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  text-align: center;
+  min-height: 200px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: visible;
+  min-width: 250px;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: flex;
+  /* Aggiunto display: flex */
+  align-items: center;
+  /* Centrare verticalmente */
+  justify-content: center;
+  /* Centrare orizzontalmente */
+}
+
+.team-logo {
+  width: 50px;
+  /* Imposta la larghezza desiderata per tutti i loghi */
+  height: 50px;
+  /* Imposta l'altezza desiderata per tutti i loghi */
+  margin-left: 8px;
+  /* Aggiunto margine a sinistra per separare il logo dal nome */
+  vertical-align: middle;
+}
+
+.team-card .info-item-container {
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  background-color: #5b5a5a;
+  border-radius: 6px;
+  padding: 3px;
+  vertical-align: middle;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.team-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.info-item span {
+  font-size: 0.9rem;
+}
+
+.team-card:hover {
+  transition: 0.2s;
+  box-shadow: 0px 0px 12px 7px #222222e6;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item-container {
+  display: flex;
+}
+
+/* Aggiunto stile per mantenere la proporzione del logo */
+.team-logo {
+  object-fit: contain;
+}
+
+
+.leaderboard-position {
+  text-align: center;
+  padding-left: 3px;
+}
+
+.players-list {
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 3px;
+}
+
+.players-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.players-list li {
+  margin: 5px 0;
+}
+
+.captain-icon {
+  height: 24px;
+  width: 24px;
+  margin-left: 2px;
+  vertical-align: middle;
+  padding-bottom: 4px;
+}
+
+.short-name {
+  font-size: 10px;
+  color: white;
+  background-color: rgb(116, 116, 116);
+  position: absolute;
+  margin: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.players-title {
+  margin-bottom: 2px;
+}
+
+
+.team-title {
+  padding: 3px;
+  border-radius: 6px;
+
+}
+
+.team-title:hover {
+  transition: 0.2s;
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  background-color: #5b5a5a;
+  color: white;
+}

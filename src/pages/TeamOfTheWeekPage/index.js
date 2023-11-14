@@ -1,7 +1,7 @@
 // TeamOfTheWeekPage.js
 import React, { useEffect, useState } from 'react';
-import './TeamOfTheWeekPage.css'; // Importa il tuo file CSS
-import TeamOfTheWeekCard from './TeamOfTheWeekCard'; // Assicurati che il percorso sia corretto
+import './index.css'; // Importa il tuo file CSS
+import TeamOfTheWeekCard from '../../components/TeamOfTheWeekCard'; // Assicurati che il percorso sia corretto
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAward } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +15,7 @@ const TeamOfTheWeekPage = () => {
     // Carica i dati da MongoDB o dalla tua API
     async function fetchTeamOfTheWeeks() {
       try {
-        const response = await fetch('http://localhost:5000/teamOfTheWeeks');
+        const response = await fetch('http://localhost:5000/team/teamOfTheWeeks');
         if (response.ok) {
           const data = await response.json();
           setTeamOfTheWeeks(data);
@@ -38,7 +38,7 @@ const TeamOfTheWeekPage = () => {
   return (
     <div className="team-of-the-week-page">
       <div className='title-header'>
-      <h2 className='title-text'><FontAwesomeIcon icon={faAward} className="fa-icon2"/>Team of The Week {selectedWeek}</h2>
+        <h2 className='title-text'><FontAwesomeIcon icon={faAward} className="fa-icon2" />Team of The Week {selectedWeek}</h2>
       </div>
       <div className="week-selector">
         <label></label>

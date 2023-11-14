@@ -4,7 +4,7 @@ import { faPlus, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
 import axios from 'axios';
 
-import './AddTeamBox.css';
+import './index.css';
 
 const AddTeamBox = () => {
   const [teamName, setTeamName] = useState('');
@@ -45,13 +45,13 @@ const AddTeamBox = () => {
     // Aggiorna lo stato 'playersWithoutTeam' con i dati ricevuti
 
     // Esempio di chiamata API (assicurati di adattarla alle tue esigenze):
-    fetch('http://localhost:5000/playersWithoutTeam')
+    fetch('http://localhost:5000/player/playersWithoutTeam')
       .then((response) => response.json())
       .then((data) => setPlayersWithoutTeam(data))
       .catch((error) => console.error('Errore nel recupero dei giocatori senza squadra:', error));
   }, []);
 
-  
+
   const validateShortName = (shortName) => {
     // Verifica se lo shortname contiene solo caratteri alfabetici
     if (/^[a-zA-Z]+$/.test(shortName)) {
@@ -72,14 +72,14 @@ const AddTeamBox = () => {
       return true;
     }
   };
-  
+
   const handleLogoChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       if (validateFileSize(file)) {
         setLogoFile(file);
       }
-      else{
+      else {
         e.target.value = null;
         alert('Error: Team Logo must be less than 200KB');
       }
@@ -155,7 +155,7 @@ const AddTeamBox = () => {
     const formData = new FormData();
     formData.append('teamName', teamName);
     formData.append('teamShortName', teamShortName);
-    const selectedPlayersName=Array.from(selectedPlayers.map((player)=>(player.name)));
+    const selectedPlayersName = Array.from(selectedPlayers.map((player) => (player.name)));
     formData.append('selectedPlayers', JSON.stringify(selectedPlayersName));
     formData.append('logoFile', logoFile);
     try {
@@ -163,13 +163,13 @@ const AddTeamBox = () => {
         alert('Error: Please fill in all required fields.');
         return;
       }
-  
-      const response = await axios.post('/addTeam', formData, {
+
+      const response = await axios.post('/team/addTeam', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-  
+
       const tmpData = response.data;
       if (response.status === 200) {
         // Gestisci la risposta dal server, ad esempio, mostra un messaggio di successo
@@ -185,20 +185,20 @@ const AddTeamBox = () => {
     } catch (error) {
       console.error('Errore durante la richiesta:', error);
     }
-  
+
     // Dopo l'invio dei dati, reimposta gli stati per i prossimi inserimenti
     setTeamName('');
     setTeamShortName('');
     setSelectedPlayers([]);
     setLogoFile(null); // Resetta il file del logo
   };
-  
+
 
 
   return (
     <div className="add-team-box">
-      <h3><FontAwesomeIcon icon={faPlus} className='fa-icon'/><FontAwesomeIcon icon={faPeopleGroup} className="fa-icon2"/>Add Team</h3>
-      <form onSubmit={handleSubmit} method="POST" action="/addTeam" encType="multipart/form-data">
+      <h3><FontAwesomeIcon icon={faPlus} className='fa-icon' /><FontAwesomeIcon icon={faPeopleGroup} className="fa-icon2" />Add Team</h3>
+      <form onSubmit={handleSubmit} method="POST" action="/team/addTeam" encType="multipart/form-data">
         <label htmlFor="teamName">Team Name:</label>
         <input
           type="text"
