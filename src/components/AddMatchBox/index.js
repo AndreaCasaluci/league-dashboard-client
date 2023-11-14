@@ -4,6 +4,8 @@ import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 
+import actions from '../../actions';
+
 const AddMatchBox = () => {
   const [teamA, setTeamA] = useState('');
   const [teamB, setTeamB] = useState('');
@@ -43,44 +45,18 @@ const AddMatchBox = () => {
 
 
   useEffect(() => {
-    // Effettua una richiesta al backend per ottenere la lista delle squadre
-    fetch('http://localhost:5000/team/teams')
-      .then((response) => response.json())
-      .then((data) => {
-        // Rimuovi il team "Free Agent" dall'array data
-        const filteredData = data.filter((team) => team !== 'Free Agent');
-
-        // Mappa il risultato filtrato in oggetti da utilizzare con setTeams
-        const teamsData = filteredData.map((team) => ({ value: team, label: team }));
-
-        setTeams(teamsData);
-      })
-      .catch((error) => console.error('Errore nel recupero delle squadre:', error));
+    actions.fetchTeams(setTeams);
   }, []);
 
   useEffect(() => {
     if (teamA) {
-      // Effettua una richiesta al backend per ottenere la lista dei giocatori del team A
-      fetch(`http://localhost:5000/player/playersByTeam/${teamA.value}`)
-        .then((response) => response.json())
-        .then((data) => setPlayersTeamA(data.map((player) => ({ value: player, label: player }))))
-        .catch((error) => console.error('Errore nel recupero dei giocatori:', error));
-
-      // Inizializza le statistiche del team A quando selezioni un nuovo team
-      setStatsTeamA({});
+      actions.fetchPlayersByTeam(teamA, setPlayersTeamA, setStatsTeamA);
     }
   }, [teamA]);
 
   useEffect(() => {
     if (teamB) {
-      // Effettua una richiesta al backend per ottenere la lista dei giocatori del team B
-      fetch(`http://localhost:5000/player/playersByTeam/${teamB.value}`)
-        .then((response) => response.json())
-        .then((data) => setPlayersTeamB(data.map((player) => ({ value: player, label: player }))))
-        .catch((error) => console.error('Errore nel recupero dei giocatori:', error));
-
-      // Inizializza le statistiche del team B quando selezioni un nuovo team
-      setStatsTeamB({});
+      actions.fetchPlayersByTeam(teamB, setPlayersTeamB, setStatsTeamB);
     }
   }, [teamB]);
 

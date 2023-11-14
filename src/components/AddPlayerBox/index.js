@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPersonRunning } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
 
+import actions from '../../actions';
+
 import "./index.css";
 
 const AddPlayerBox = () => {
@@ -35,14 +37,7 @@ const AddPlayerBox = () => {
   };
 
   useEffect(() => {
-    // Esegui una chiamata API per ottenere la lista delle squadre dal tuo server
-    // Aggiorna lo stato 'teams' con i dati ricevuti
-
-    // Esempio di chiamata API (assicurati di adattarla alle tue esigenze):
-    fetch('http://localhost:5000/team/teams')
-      .then((response) => response.json())
-      .then((data) => setTeams(data))
-      .catch((error) => console.error('Errore nel recupero delle squadre:', error));
+    actions.fetchTeams(setTeams);
   }, []);
 
   const handleSubmit = async (e) => {

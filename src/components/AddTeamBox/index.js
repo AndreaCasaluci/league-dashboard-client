@@ -4,6 +4,8 @@ import { faPlus, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 import Select from 'react-select';
 import axios from 'axios';
 
+import actions from '../../actions';
+
 import './index.css';
 
 const AddTeamBox = () => {
@@ -41,14 +43,7 @@ const AddTeamBox = () => {
 
 
   useEffect(() => {
-    // Esegui una chiamata API per ottenere la lista di giocatori senza squadra dal tuo server
-    // Aggiorna lo stato 'playersWithoutTeam' con i dati ricevuti
-
-    // Esempio di chiamata API (assicurati di adattarla alle tue esigenze):
-    fetch('http://localhost:5000/player/playersWithoutTeam')
-      .then((response) => response.json())
-      .then((data) => setPlayersWithoutTeam(data))
-      .catch((error) => console.error('Errore nel recupero dei giocatori senza squadra:', error));
+    actions.fetchPlayersWithNoTeam(setPlayersWithoutTeam);
   }, []);
 
 
@@ -85,70 +80,6 @@ const AddTeamBox = () => {
       }
     }
   };
-
-
-  /* const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Creazione di un oggetto dati da inviare al server
-    const data = {
-      teamName,
-      teamShortName,
-      selectedPlayers,
-      logoFile, // Aggiunto il file del logo ai dati da inviare
-    };
-
-    try {
-      if (data.teamName === '' || data.teamName === undefined || data.teamName === null) {
-        alert('Error: you must insert a Team Name!');
-        return;
-      }
-      if (data.teamShortName === '' || data.teamShortName === undefined || data.teamShortName === null) {
-        alert('Error: you must insert a Team Short Name!');
-        return;
-      } else if (data.teamShortName.length !== 3) {
-        alert('Error: Team Short Name must be 3 characters long!');
-        return;
-      }
-      if (!data.logoFile) {
-        alert('Error: you must upload a team logo!');
-        return;
-      }
-
-      if (shortNameError) {
-        alert(shortNameError);
-        return;
-      }
-
-      const response = await fetch('/addTeam', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      const tmpData = await response.json();
-      if (response.status === 200) {
-        // Gestisci la risposta dal server, ad esempio, mostra un messaggio di successo
-        alert(tmpData.message);
-      } else {
-        if (response.status === 201 || response.status === 500) alert(tmpData.message);
-        else {
-          // Gestisci eventuali errori o risposte di errore dal server
-          console.error('Error while trying to add a team', response.status, response.statusText);
-          alert('Error while trying to add a team');
-        }
-      }
-    } catch (error) {
-      console.error('Errore durante la richiesta:', error);
-    }
-
-    // Dopo l'invio dei dati, reimposta gli stati per i prossimi inserimenti
-    setTeamName('');
-    setTeamShortName('');
-    setSelectedPlayers([]);
-    setLogoFile(null); // Resetta il file del logo
-  }; */
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -223,7 +154,7 @@ const AddTeamBox = () => {
           type="file"
           id="logoFile"
           name="logoFile"
-          accept="image/png, image/jpeg"
+          accept="image/png"
           onChange={handleLogoChange}
         />
 

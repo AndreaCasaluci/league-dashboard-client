@@ -5,6 +5,7 @@ import TeamOfTheWeekCard from '../../components/TeamOfTheWeekCard'; // Assicurat
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAward } from '@fortawesome/free-solid-svg-icons';
 
+import actions from '../../actions';
 
 
 const TeamOfTheWeekPage = () => {
@@ -12,27 +13,9 @@ const TeamOfTheWeekPage = () => {
   const [selectedWeek, setSelectedWeek] = useState(null);
 
   useEffect(() => {
-    // Carica i dati da MongoDB o dalla tua API
-    async function fetchTeamOfTheWeeks() {
-      try {
-        const response = await fetch('http://localhost:5000/team/teamOfTheWeeks');
-        if (response.ok) {
-          const data = await response.json();
-          setTeamOfTheWeeks(data);
-          // Imposta di default l'ultima settimana disponibile
-          if (data.length > 0) {
-            setSelectedWeek(data[data.length - 1].weekNumber);
-            console.log(data);
-          }
-        } else {
-          console.error('Errore nel recupero dei dati Team Of The Week');
-        }
-      } catch (error) {
-        console.error('Errore nel recupero dei dati Team Of The Week:', error);
-      }
-    }
 
-    fetchTeamOfTheWeeks();
+    actions.fetchTOTW(setTeamOfTheWeeks, setSelectedWeek);
+
   }, []);
 
   return (

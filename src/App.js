@@ -16,6 +16,8 @@ import TeamsPage from './pages/TeamsPage';
 import TeamOfTheWeekPage from './pages/TeamOfTheWeekPage';
 import LoaderExampleText from './components/Loader';
 
+import actions from './actions';
+
 function App() {
   const [section, setSection] = useState('Home');
   const [playersData, setPlayersData] = useState([]);
@@ -32,70 +34,7 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    async function fetchData() {
-      try {
-        if (section === 'Players') {
-          let url = "http://localhost:5000/player/players";  // Assicurati di avere la route corretta nel tuo backend
-
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            setPlayersData(data);
-          }
-        }
-        else if (section === 'LeagueLeaderboard') {
-          let url = "http://localhost:5000/leaderboard/league";
-
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            setLeagueLeaderboardData(data);
-          }
-        }
-        else if (section === 'GoalLeaderboard') {
-          let url = "http://localhost:5000/leaderboard/goal";
-
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            setGoalLeaderboardData(data);
-          }
-        }
-        else if (section === 'AssistLeaderboard') {
-          let url = "http://localhost:5000/leaderboard/assist";
-
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            setAssistLeaderboardData(data);
-          }
-        }
-        else if (section === 'CleansheetLeaderboard') {
-          let url = "http://localhost:5000/leaderboard/cleansheet";
-
-          const response = await fetch(url);
-          if (response.ok) {
-            const data = await response.json();
-            setCleansheetLeaderboardData(data);
-          }
-        }
-        else if (section === 'AdminPanel') {
-          if (!isLogged) {
-            setSection('Login');
-
-          }
-          else {
-            // Do whatever Admin Panel is
-          }
-        }
-      } catch (error) {
-        console.error('Errore nel recupero dei dati:', error);
-      } finally {
-        console.log(section);
-        setLoading(false);
-      }
-    }
-    fetchData();
+    actions.fetchData(section, isLogged, setPlayersData, setLeagueLeaderboardData, setGoalLeaderboardData, setAssistLeaderboardData, setCleansheetLeaderboardData, setSection, setLoading);
   }, [section, isLogged]);
 
   if (loading) {
