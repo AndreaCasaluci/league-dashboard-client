@@ -14,6 +14,7 @@ import './App.css';
 import './components/AddPlayerBox';
 import TeamsPage from './pages/TeamsPage';
 import TeamOfTheWeekPage from './pages/TeamOfTheWeekPage';
+import LoaderExampleText from './components/Loader';
 
 function App() {
   const [section, setSection] = useState('Home');
@@ -22,7 +23,7 @@ function App() {
   const [goalLeaderboardData, setGoalLeaderboardData] = useState([]);
   const [assistLeaderboardData, setAssistLeaderboardData] = useState([]);
   const [cleansheetLeaderboardData, setCleansheetLeaderboardData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const [isLogged, setIsLogged] = useState(false);
   const [globalUsername, setGlobalUsername] = useState([]);
@@ -97,62 +98,122 @@ function App() {
     fetchData();
   }, [section, isLogged]);
 
-  return (
-    <div className="App">
-      <Navbar setSection={setSection} />
-      <div className="content">
-        {section === 'Players' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'Players' && !loading ? (
-          <PlayersPage players={playersData} />
-        ) : null}
-        {section === 'Teams' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'Teams' && !loading ? (
-          <TeamsPage teams={playersData} />
-        ) : null}
-        {section === 'TOTW' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'TOTW' && !loading ? (
-          <TeamOfTheWeekPage />
-        ) : null}
-        {section === 'LeagueLeaderboard' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'LeagueLeaderboard' && !loading ? (
-          <LeagueLeaderboard classifica={leagueLeaderboardData} />
-        ) : null}
-
-        {section === 'GoalLeaderboard' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'GoalLeaderboard' && !loading ? (
-          <GoalLeaderboard classifica={goalLeaderboardData} />
-        ) : null}
-
-        {section === 'AssistLeaderboard' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'AssistLeaderboard' && !loading ? (
-          <AssistLeaderboard classifica={assistLeaderboardData} />
-        ) : null}
-
-        {section === 'CleansheetLeaderboard' && loading ? (
-          <p>Loading...</p>
-        ) : section === 'CleansheetLeaderboard' && !loading ? (
-          <CleansheetLeaderboard classifica={cleansheetLeaderboardData} />
-        ) : null}
-
-        {section === 'Login' && (
-          <Login setIsLogged={setIsLogged} setSection={setSection} setGlobalUsername={setGlobalUsername} />
-        )}
-
-        {section === 'AdminPanel' && isLogged && (
-          <>
-            <div className='admin-header'><div className='hello-text'>Hello, {globalUsername}</div></div>
-            <AdminPanel />
-          </>
-        )}
+  if (loading) {
+    return (
+      <div className="App">
+        <Navbar setSection={setSection} />
+        <div className="content">
+          <LoaderExampleText></LoaderExampleText>
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
+  else {
+    switch (section) {
+      case "Home":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+            </div>
+          </div>
+        )
+      case "Players":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <PlayersPage players={playersData} />
+            </div>
+          </div>
+        )
+      case "Teams":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <TeamsPage teams={playersData} />
+            </div>
+          </div>
+        )
+      case "TOTW":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <TeamOfTheWeekPage />
+            </div>
+          </div>
+        )
+      case "LeagueLeaderboard":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <LeagueLeaderboard classifica={leagueLeaderboardData} />
+            </div>
+          </div>
+        )
+      case "GoalLeaderboard":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <GoalLeaderboard classifica={goalLeaderboardData} />
+            </div>
+          </div>
+        )
+      case "AssistLeaderboard":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <AssistLeaderboard classifica={assistLeaderboardData} />
+            </div>
+          </div>
+        )
+      case "CleansheetLeaderboard":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <CleansheetLeaderboard classifica={cleansheetLeaderboardData} />
+            </div>
+          </div>
+        )
+      case "Login":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <Login setIsLogged={setIsLogged} setSection={setSection} setGlobalUsername={setGlobalUsername} />
+            </div>
+          </div>
+        )
+      case "AdminPanel":
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+              <div className='admin-header'><div className='hello-text'>Hello, {globalUsername}</div></div>
+              <AdminPanel />
+            </div>
+          </div>
+        )
+      default:
+        return (
+          <div className="App">
+            <Navbar setSection={setSection} />
+            <div className="content">
+            </div>
+          </div>
+        )
+    }
+  }
+
+
+
+
 }
 
 export default App;
