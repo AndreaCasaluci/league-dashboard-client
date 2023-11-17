@@ -224,7 +224,7 @@ th {
   border-radius: 7px;
   background-color: #333333;
   box-shadow: 0px 0px 6px 4px #222222e6;
-  position: fixed;
+  position: relative;
 }
 
 .hello-text:hover {
