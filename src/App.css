@@ -1,38 +1,43 @@
 /* styles.css */
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #444444;
-    /* background-image: url('../public/competitivefutsalleaguebackground.jpg'); */ /* Sostituisci con il percorso dell'immagine desiderata */
-    /* background-size: cover; */ /* Questa proprietà imposta la dimensione dell'immagine in modo che copra completamente l'elemento */
+  font-family: 'Poppins', sans-serif;
+  background-color: #444444;
+  /* background-image: url('../public/competitivefutsalleaguebackground.jpg'); */
+  /* Sostituisci con il percorso dell'immagine desiderata */
+  /* background-size: cover; */
+  /* Questa proprietà imposta la dimensione dell'immagine in modo che copra completamente l'elemento */
 
-  }
+}
 
-  .leaderboard-container {
-    display: flex;
-    align-items: flex-start; /* Allinea le tabelle dall'alto */
-    gap: 20px; /* Spazio tra le tabelle */
-  }
-  
-  .leaderboard {
-    flex:1;
-    padding: 10px;
-    min-height: 300px; /* Altezza minima desiderata per le tabelle */
-    border-radius: 5px;
-  }
+.leaderboard-container {
+  display: flex;
+  align-items: flex-start;
+  /* Allinea le tabelle dall'alto */
+  gap: 20px;
+  /* Spazio tra le tabelle */
+}
+
+.leaderboard {
+  flex: 1;
+  padding: 10px;
+  min-height: 300px;
+  /* Altezza minima desiderata per le tabelle */
+  border-radius: 5px;
+}
 
 
 /* Stile generale della tabella */
 .table-container {
-    font-family: Arial, sans-serif;
-    border: 3px solid #e2e2e2;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    margin-left: 10px;
-    color:#ccc;
-  }
+  font-family: Arial, sans-serif;
+  border: 3px solid #e2e2e2;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 10px;
+  color: #ccc;
+}
 
 /*   .table-container:only-child:hover{
     transition: 0.2s;
@@ -43,120 +48,128 @@ body {
     font-size: 20px;
   } */
 
-  .table-container:hover{
-    transition: 0.2s;
-    transform: translateY(-3px);
-    color: #444;
-    background-color: #ccc;
-    font-weight: bold;
-    font-size: 20px;
-  }
+.table-container:hover {
+  transition: 0.2s;
+  transform: translateY(-3px);
+  color: #444;
+  background-color: #ccc;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-  .section-title{
-    color: white;
-    font-weight: bold;
-    font-size: 33px;
-    text-align: center;
-    margin-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-radius: 5px;
-    color: black;
-    font-size: 18px;
-    font-weight: normal;
-  }
-  
-  th, td {
-    padding: 10px;
-    border-bottom: 1px solid #e2e2e2;
-    text-align: center;
-  }
-  
-  /* Stile per l'intestazione */
-  th {
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    border-top: 1px solid #e2e2e2;
-    border-bottom: 2px solid #333;
-    text-transform: uppercase;
-  }
-  
-  /* Stile per le righe dispari */
-  tr:nth-child(odd) {
-    background-color: #f2f2f2;
-  }
-  
-  /* Stile per le righe pari */
-  tr:nth-child(even) {
-    background-color: #e9e7e7;
-  }
-  
-  /* Hover sottolineato per le righe */
-  tr:hover {
-    background-color: #ddd;
-  }
-  
-  /* Stile per le intestazioni delle colonne */
-  th, td {
-    border: none;
-  }
-  
-  /* Rendi il testo in grassetto per l'intestazione della colonna */
-  th {
-    font-weight: bold;
-  }
-  
-  /* Smussa gli angoli esterni della tabella */
-  .table-container {
-    border-radius: 10px;
-  }
-  
-  /* Rimuovi la cornice interna delle celle */
-  td, th {
-    border: none;
-  }
-  
-  /* Alza leggermente le celle al passaggio del mouse */
-  td, th {
-    transition: 0.2s;
-  }
-  
-  /* Effetto al passaggio del mouse */
- /*  th:hover {
+.section-title {
+  color: white;
+  font-weight: bold;
+  font-size: 33px;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: center;
+}
+
+/* Stile per l'intestazione */
+th {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+}
+
+/* Stile per le righe dispari */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Stile per le righe pari */
+tr:nth-child(even) {
+  background-color: #e9e7e7;
+}
+
+/* Hover sottolineato per le righe */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Stile per le intestazioni delle colonne */
+th,
+td {
+  border: none;
+}
+
+/* Rendi il testo in grassetto per l'intestazione della colonna */
+th {
+  font-weight: bold;
+}
+
+/* Smussa gli angoli esterni della tabella */
+.table-container {
+  border-radius: 10px;
+}
+
+/* Rimuovi la cornice interna delle celle */
+td,
+th {
+  border: none;
+}
+
+/* Alza leggermente le celle al passaggio del mouse */
+td,
+th {
+  transition: 0.2s;
+}
+
+/* Effetto al passaggio del mouse */
+/*  th:hover {
     transform: translateY(-3px);
     background-color: #ccc;
     cursor: pointer;
   } */
-  
-  /* Aggiungi un po' di spazio tra le celle */
-  td, th {
-    padding: 10px;
-  }
+
+/* Aggiungi un po' di spazio tra le celle */
+td,
+th {
+  padding: 10px;
+}
 
 
-  .no-data-message {
-    text-align: center;
-    font-size: 18px;
-    margin: 20px; /* Spazio attorno al messaggio */
-    padding: 10px; /* Spazio interno al messaggio */
-    border-radius: 5px;
-  }
+.no-data-message {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+  /* Spazio attorno al messaggio */
+  padding: 10px;
+  /* Spazio interno al messaggio */
+  border-radius: 5px;
+}
 
 
-  
-  .lds-ring {
+
+.lds-ring {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
+
 .lds-ring div {
   box-sizing: border-box;
   display: block;
@@ -169,19 +182,24 @@ body {
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: #fff transparent transparent transparent;
 }
+
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
 }
+
 .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
 }
+
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
+
 @keyframes lds-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -200,19 +218,20 @@ body {
   margin-left: 10px;
   margin-bottom: 100px;
 }
-.hello-text{
-  padding:10px;
+
+.hello-text {
+  padding: 10px;
   border-radius: 7px;
   background-color: #333333;
   box-shadow: 0px 0px 6px 4px #222222e6;
   position: fixed;
 }
 
-.hello-text:hover{
+.hello-text:hover {
   transition: 0.2s;
   background-color: #333333;
   transform: translateY(-3px);
-    box-shadow: 0px 0px 10px 5px #222222e6;
-    color:white;
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  color: white;
 
 }

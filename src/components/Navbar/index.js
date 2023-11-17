@@ -24,12 +24,12 @@ const Navbar = ({ setSection, activeSection }) => {
       <div className="navbar">
         <div className="logo">
           {/* <img src="./logo.png" /> */}
-          <img src={require('./COMPETITIVEFUTSALLEAGUELOGO2.jpg')} alt="Logo" className="real-logo" />
-          {/* <span className="custom-text">
+          {/* <img src={require('./COMPETITIVEFUTSALLEAGUELOGO2.jpg')} alt="Logo" className="real-logo" /> */}
+          <span className="custom-text">
             <span className="first-letter">C</span>OMPETITIVE<br></br>
             <span className="first-letter">F</span>UTSAL<br></br>
             <span className="first-letter">L</span>EAGUE
-          </span> */}
+          </span>
         </div>
         <ul className="nav-links">
           <li onClick={() => handleSectionChange('Home')} className={activeSection === 'Home' ? 'active' : ''}>
