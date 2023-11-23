@@ -10,7 +10,7 @@ import actions from '../../actions';
 
 const TeamOfTheWeekPage = () => {
   const [teamOfTheWeeks, setTeamOfTheWeeks] = useState([]);
-  const [selectedWeek, setSelectedWeek] = useState(null);
+  const [selectedWeek, setSelectedWeek] = useState('');
 
   useEffect(() => {
 
@@ -38,7 +38,7 @@ const TeamOfTheWeekPage = () => {
       </div>
       <div className="team-of-the-week-cards-container">
         {teamOfTheWeeks
-          .filter((week) => week.weekNumber === selectedWeek)
+          .filter((week) => week.weekNumber === parseInt(selectedWeek))
           .map((week) => (
             <div key={week.weekNumber} className="team-of-the-week-container">
               {week.players.map((player) => (

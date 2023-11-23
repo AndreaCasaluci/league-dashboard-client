@@ -6,7 +6,6 @@ const TeamOfTheWeekCard = ({ role, teamLogo, playerAvatar, playerName }) => {
 
   /* console.log(teamLogoFileName);*/
   const teamLogoPath = require("../../../../teamLogos/" + teamLogo);
-  console.log(teamLogoPath);
 
   return (
     <div className="team-of-the-week-card">
