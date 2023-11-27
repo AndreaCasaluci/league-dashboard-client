@@ -130,7 +130,21 @@ const fetchTOTW = async (setTeamOfTheWeeks, setSelectedWeek) => {
     }
 }
 
+const fetchMatchdays = async (setMatchdays) => {
+    try {
+        const response = await fetch('http://localhost:5000/match/matchdays');
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            setMatchdays(data);
+        } else {
+            console.error('Errore nel recupero dei dati Matchdays');
+        }
+    } catch (error) {
+        console.error('Errore nel recupero dei dati Matchdays:', error);
+    }
+}
 
 
 
-export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW }
+export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW, fetchMatchdays }

@@ -1,0 +1,128 @@
+/* FixturesPage.css */
+
+.fixtures-page {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.title h2 {
+    background-color: #333;
+    padding: 10px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+.matchday-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f8f8f8;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.match-container {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.stats-container div {
+    flex: 1;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.match-container {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.match-container:hover {
+    background-color: #f8f8f8;
+}
+
+.expanded {
+    background-color: #f8f8f8;
+}
+
+.player-stats {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.title-header {
+    color: #ccc;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+.fixtures-page .title-text {
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #333333;
+    box-shadow: 0px 0px 6px 4px #222222e6;
+    margin: auto;
+    width: auto;
+    color: white;
+    min-width: 300px;
+}
+
+.title-text:hover {
+    transition: 0.2s;
+    background-color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px 5px #222222e6;
+    color: white;
+}
+
+.fa-icon2 {
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+}

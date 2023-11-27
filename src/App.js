@@ -8,6 +8,7 @@ import CleansheetLeaderboard from './pages/CleansheetLeaderboard';
 import Login from './pages/Login';
 import AdminPanel from './pages/AdminPanel';
 import PlayersPage from './pages/PlayersPage';
+import FixturesPage from './pages/FixturesPage';
 
 import './App.css';
 /* import './Navbar.css'; */
@@ -136,6 +137,15 @@ function App() {
             <div className="content">
               <div className='admin-header'><div className='hello-text'>Hello, {globalUsername}</div></div>
               <AdminPanel />
+            </div>
+          </div>
+        )
+      case "Fixtures":
+        return (
+          <div className='App'>
+            <Navbar setSection={setSection} />
+            <div className='content'>
+              <FixturesPage />
             </div>
           </div>
         )
