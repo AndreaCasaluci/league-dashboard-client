@@ -1,0 +1,169 @@
+.match-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #555;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px #2f2f2fe6;
+}
+
+.match-container:hover {
+    transition: 0.2s;
+    box-shadow: 0px 0px 6px 6px #222222e6;
+}
+
+.match-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    align-items: center;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #555;
+    color: white;
+}
+
+
+
+.match-container .left-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-left: 20px;
+    min-width: 80px;
+}
+
+.match-container .wildcard-icon {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+    padding-top: 3px;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.match-container .wildcard {
+    vertical-align: middle;
+    justify-content: left;
+    display: flex;
+}
+
+.match-container .center-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.match-container .left-team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.match-container .right-team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.match-container .right-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 20px;
+    min-width: 80px;
+}
+
+.match-container .team-logo {
+    width: 35px;
+    height: 35px;
+}
+
+.match-container .result {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    min-width: 30px;
+    justify-content: center;
+}
+
+.match-container .vs {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    min-width: 30px;
+    justify-content: center;
+}
+
+.match-container .play-icon {
+    margin-right: 5px;
+}
+
+
+.match-container .stats-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+
+
+.match-container .stats-container div {
+    flex: 1;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.expanded {
+    background-color: #f8f8f8;
+    background-color: #555;
+    color: white;
+}
+
+.match-container .player-stats {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    gap: 4px;
+}
+
+.match-container .left-wildcard-defwin {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 13px;
+    padding-top: 3px;
+    background: none !important;
+}
+
+.match-container .left-wildcard-defwin .wildcard-icon {
+    width: 12px;
+    padding-top: 4px;
+    height: 12px;
+    background: none !important;
+}

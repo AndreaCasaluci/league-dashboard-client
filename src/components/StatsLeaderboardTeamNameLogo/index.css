@@ -1,0 +1,24 @@
+.stats-team-name-logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 18px;
+    padding-left: 10%;
+}
+
+.stats-team-name-logo .team-logo2 {
+    vertical-align: middle;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.stats-team-name-logo .team-name2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.stats-team-name-logo .team-logo2 {
+    margin-right: 4px;
+}

@@ -22,15 +22,15 @@ Leaderboard {
 
 /* styles.css */
 
-table {
+/* table {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
   font-family: Arial, sans-serif;
   text-align: center;
-}
+} */
 
-th, td {
+/* th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
@@ -39,53 +39,55 @@ th, td {
 th {
   background-color: #f2f2f2;
   color: #333;
-}
+} */
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
 tr:hover {
   background-color: #ddd;
-}
+} */
 
 /* Aggiungi un po' di spazio tra le celle */
-th, td {
+th,
+td {
   padding: 12px;
 }
 
 /* Stile dell'intestazione */
-th {
+/* th {
   background-color: #333;
   color: white;
   font-weight: bold;
-}
+} */
 
 /* Stile delle righe dispari */
-tr:nth-child(odd) {
+/* tr:nth-child(odd) {
   background-color: #f2f2f2;
-}
+} */
 
 /* Stile delle righe pari */
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #e0e0e0;
-}
+} */
 
 /* Stile delle celle del corpo della tabella */
-td {
+/* td {
   text-align: center;
   vertical-align: middle;
-}
+} */
 
 /* Hover sottolineato per le righe */
-tr:hover {
+/* tr:hover {
   background-color: #ddd;
-}
+} */
 
 /* Stile per le intestazioni delle colonne */
-th, td {
+/* th,
+td {
   border: 1px solid #ddd;
-}
+} */
 
 /* Rendi il testo in grassetto per l'intestazione della colonna */
 th {
@@ -93,11 +95,11 @@ th {
 }
 
 /* Stile per le righe alternate */
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #f2f2f2;
-}
+} */
 
 
-h1{
+h1 {
   text-align: center;
 }

@@ -1,5 +1,6 @@
 // PlayerCard.js
 import React from 'react';
+import { AutoTextSize } from 'auto-text-size'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faFutbol, faHandshake, faMitten, faStopwatch, faUsers } from '@fortawesome/free-solid-svg-icons'; // Sostituisci con le icone appropriate
 import './index.css'; // Importa lo stile CSS
@@ -9,12 +10,20 @@ const PlayerCard = ({ playerName, team, goals, assists, cleansheets, playtime, c
 
   return (
     <div className="player-card">
-      <div className='player-name'>
+      <div className='top-row'>
+        <div className='left-empty-box'></div>
+        <div className='player-name'><AutoTextSize maxFontSizePx={30} className='player-name2'>{playerName}</AutoTextSize></div>
+        <div className='right-logo-box'>{teamLogoFileName && <img src={teamLogoPath} alt={`${team} Logo`} className="team-logo" />}</div>
+      </div>
+
+
+      {/* <div className='player-name'>
+
         <h3>
           {playerName}
           {teamLogoFileName && <img src={teamLogoPath} alt={`${team} Logo`} className="team-logo" />}
         </h3>
-      </div>
+      </div> */}
       <div className="player-info">
         <div className='info-box'>
           <div className="info-item">

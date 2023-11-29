@@ -1,6 +1,7 @@
 /* Navbar.css */
 
 
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -37,9 +38,15 @@
   border-radius: 10px;
   text-align: left;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Lilita One', sans-serif;
   font-weight: bold;
   font-size: 24px;
+  font-size: 30px;
+  padding: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   /* color: #ffffff; */
 }
 
@@ -71,11 +78,15 @@
 
 
 span.custom-text {
-  font-family: 'Lato', sans-serif;
-  font-size: 26px;
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Rubik', sans-serif; */
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 33px;
   font-weight: 900;
   /* Dimensione generale del testo */
-  background-image: linear-gradient(180deg, #db336a, #fa0355);
+  /* background-image: linear-gradient(180deg, #db336a, #fa0355); */
+  background-image: linear-gradient(to right bottom, #39b8a7, #00acc1, #009cdf, #0085f3, #2663eb);
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,7 +94,7 @@ span.custom-text {
 
 .first-letter {
   transform: translateY(13px);
-  font-size: 34px;
+  font-size: 40px;
   /* Dimensione più grande per la prima lettera */
   /* color: #D93369; */
   /* Colore diverso per la prima lettera */

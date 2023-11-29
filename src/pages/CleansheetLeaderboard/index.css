@@ -1,0 +1,139 @@
+.cs-leaderboard-container {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-between;
+}
+
+
+.cs-leaderboard {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs-leaderboard .title-header {
+    color: #ccc;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.cs-leaderboard .title-text {
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #333333;
+    box-shadow: 0px 0px 6px 4px #222222e6;
+    margin: auto;
+    width: auto;
+    color: white;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+
+
+.cs-leaderboard .title-text:hover {
+    transition: 0.2s;
+    background-color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px 5px #222222e6;
+    color: white;
+}
+
+.cs-leaderboard .table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.cs-leaderboard table {
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+.cs-leaderboard .fa-icon2 {
+    width: 23px;
+    height: 23px;
+    padding-top: 7px;
+    vertical-align: middle;
+
+}
+
+
+
+
+.cs-leaderboard .first-pos {
+    background-color: #fad25a !important;
+    color: black;
+    /* border-left: 4px solid greenyellow; */
+    /* box-shadow: 4px 0 0 0 greenyellow inset; */
+
+}
+
+.second-pos {
+    background-color: #c5cbe1 !important;
+}
+
+.third-pos {
+    background-color: #bf8970 !important;
+}
+
+.cs-leaderboard tr {
+    border-bottom: 1px solid #333;
+}
+
+.cs-leaderboard tr.first-pos td {
+    background: none !important;
+}
+
+.cs-leaderboard tr.second-pos td {
+    background: none !important;
+}
+
+.cs-leaderboard tr.third-pos td {
+    background: none !important;
+}
+
+
+.cs-leaderboard tr.first-pos td:first-of-type {
+    box-shadow: 4px 0 0 0 #e8b51d inset !important;
+}
+
+.cs-leaderboard tr.second-pos td:first-of-type {
+    box-shadow: 4px 0 0 0 #a2a5af inset !important;
+}
+
+.cs-leaderboard tr.third-pos td:first-of-type {
+    box-shadow: 4px 0 0 0 #9d705b inset !important;
+}
+
+.cs-leaderboard tr {
+    padding-bottom: 150px !important;
+}
+
+.team-name-logo-container {
+    display: flex;
+}
+
+.team-name-logo {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.team-name-logo img {
+    width: 25px;
+    height: 25px;
+}

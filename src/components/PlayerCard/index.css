@@ -15,15 +15,20 @@
 .player-card h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
-  display: flex; /* Aggiunto display: flex */
-  align-items: center; /* Centrare verticalmente */
-  justify-content: center; /* Centrare orizzontalmente */
+  display: flex;
+  /* Aggiunto display: flex */
+  align-items: center;
+  /* Centrare verticalmente */
+  justify-content: center;
+  /* Centrare orizzontalmente */
+  color: white;
 }
 
-.player-card .player-name{
-    border-radius: 6px;
-    padding-left: 2px;
-    padding-right: 2px;
+.player-card .player-name {
+  border-radius: 6px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: white;
 }
 
 .player-card .player-name:hover {
@@ -36,9 +41,12 @@
 
 
 .team-logo {
-  width: 40px; /* Imposta la larghezza desiderata per tutti i loghi */
-  height: 40px; /* Imposta l'altezza desiderata per tutti i loghi */
-  margin-left: 8px; /* Aggiunto margine a sinistra per separare il logo dal nome */
+  width: 40px;
+  /* Imposta la larghezza desiderata per tutti i loghi */
+  height: 40px;
+  /* Imposta l'altezza desiderata per tutti i loghi */
+  margin-left: 8px;
+  /* Aggiunto margine a sinistra per separare il logo dal nome */
   vertical-align: middle;
 }
 
@@ -84,7 +92,35 @@
   object-fit: contain;
 }
 
-.team-name{
+.team-name {
   margin-left: 5px;
   font-weight: bold;
+}
+
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.left-empty-box {
+  width: 50px;
+}
+
+.right-logo-box {
+  width: 50px;
+  align-items: center;
+  padding: 0;
+}
+
+.right-logo-box .team-logo {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.player-name2 {
+  font-weight: bolder;
+  font-size: 22px;
 }

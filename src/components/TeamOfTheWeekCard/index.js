@@ -1,5 +1,6 @@
 // TeamOfTheWeekCard.js
 import React from 'react';
+import { AutoTextSize } from 'auto-text-size'
 import './index.css'; // Importa il tuo file CSS
 
 const TeamOfTheWeekCard = ({ role, teamLogo, playerAvatar, playerName }) => {
@@ -20,7 +21,7 @@ const TeamOfTheWeekCard = ({ role, teamLogo, playerAvatar, playerName }) => {
           <div className="player-avatar">{playerAvatar}</div>
         </div>
       </div>
-      <div className="bottom">{playerName}</div>
+      <div className="bottom"><AutoTextSize maxFontSizePx={16}>{playerName}</AutoTextSize></div>
     </div>
   );
 };

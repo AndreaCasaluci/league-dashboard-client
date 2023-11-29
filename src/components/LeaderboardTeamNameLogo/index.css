@@ -1,0 +1,15 @@
+.team-name-logo {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding-left: 30%;
+    font-size: 18px;
+}
+
+.team-name-logo .team-logo {
+    vertical-align: middle;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
