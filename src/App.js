@@ -15,12 +15,12 @@ import './App.css';
 import './components/AddPlayerBox';
 import TeamsPage from './pages/TeamsPage';
 import TeamOfTheWeekPage from './pages/TeamOfTheWeekPage';
-import LoaderExampleText from './components/Loader';
+import Loading from './components/Loading';
 
 import actions from './actions';
 
 function App() {
-  const [section, setSection] = useState('Home');
+  const [section, setSection] = useState('LeagueLeaderboard');
   const [playersData, setPlayersData] = useState([]);
   const [leagueLeaderboardData, setLeagueLeaderboardData] = useState([]);
   const [goalLeaderboardData, setGoalLeaderboardData] = useState([]);
@@ -43,7 +43,7 @@ function App() {
       <div className="App">
         <Navbar setSection={setSection} />
         <div className="content">
-          <LoaderExampleText></LoaderExampleText>
+          <Loading />
         </div>
       </div>
     )

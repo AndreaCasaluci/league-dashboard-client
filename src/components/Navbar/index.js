@@ -32,9 +32,9 @@ const Navbar = ({ setSection, activeSection }) => {
           </span>
         </div>
         <ul className="nav-links">
-          <li onClick={() => handleSectionChange('Home')} className={activeSection === 'Home' ? 'active' : ''}>
+          {/* <li onClick={() => handleSectionChange('Home')} className={activeSection === 'Home' ? 'active' : ''}>
             <FontAwesomeIcon icon={faHouse} className="fa-icon" />Home
-          </li>
+          </li> */}
           <li onClick={() => handleSectionChange('Teams')} className={activeSection === 'Teams' ? 'active' : ''}>
             <FontAwesomeIcon icon={faPeopleGroup} className="fa-icon" />Teams
           </li>

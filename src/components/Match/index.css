@@ -87,23 +87,23 @@
     height: 35px;
 }
 
-.match-container .result {
+.result {
     display: flex;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
     text-align: center;
-    min-width: 30px;
+    width: 30px;
     justify-content: center;
 }
 
-.match-container .vs {
+.vs {
     display: flex;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
     text-align: center;
-    min-width: 30px;
+    width: 30px;
     justify-content: center;
 }
 
@@ -166,4 +166,23 @@ h4 {
     padding-top: 4px;
     height: 12px;
     background: none !important;
+}
+
+
+.center-div {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.right-team-container {
+    width: 250px;
+    display: flex;
+    justify-content: flex-start !important;
+}
+
+.left-team-container {
+    width: 250px;
+    display: flex;
+    justify-content: flex-end !important;
 }

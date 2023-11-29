@@ -2,6 +2,7 @@
 
 .player-card {
   background-color: #333;
+  background: linear-gradient(151deg, #333 23.32%, rgba(33, 12, 120, 0.00) 137.29%);
   color: white;
   border: 1px solid #333;
   border-radius: 8px;
@@ -10,6 +11,7 @@
   box-shadow: 0px 0px 10px 5px #222222e6;
   text-align: center;
   min-width: 280px;
+  max-width: 280px;
 }
 
 .player-card h3 {
@@ -123,4 +125,43 @@
 .player-name2 {
   font-weight: bolder;
   font-size: 22px;
+}
+
+.info-item-cost3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  color: #cc87eb;
+}
+
+.info-item-cost3 span {
+  font-size: 0.9rem;
+}
+
+.info-item-cost2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  color: #fdd550;
+}
+
+.info-item-cost2 span {
+  font-size: 0.9rem;
+}
+
+.info-item-cost1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  color: #a3bdba;
+}
+
+.info-item-cost1 span {
+  font-size: 0.9rem;
 }

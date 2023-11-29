@@ -12,7 +12,7 @@ const PlayerCard = ({ playerName, team, goals, assists, cleansheets, playtime, c
     <div className="player-card">
       <div className='top-row'>
         <div className='left-empty-box'></div>
-        <div className='player-name'><AutoTextSize maxFontSizePx={30} className='player-name2'>{playerName}</AutoTextSize></div>
+        <div className='player-name'><AutoTextSize maxFontSizePx={18} className='player-name2'>{playerName}</AutoTextSize></div>
         <div className='right-logo-box'>{teamLogoFileName && <img src={teamLogoPath} alt={`${team} Logo`} className="team-logo" />}</div>
       </div>
 
@@ -49,10 +49,35 @@ const PlayerCard = ({ playerName, team, goals, assists, cleansheets, playtime, c
               <FontAwesomeIcon icon={faStopwatch} className="info-icon" />
               <span>{playtime}</span>
             </div>
-            <div className="info-item">
-              <FontAwesomeIcon icon={faCoins} className="info-icon" />
-              <span>{cost}</span>
-            </div>
+            {cost === 0 ?
+              <div className="info-item">
+                <FontAwesomeIcon icon={faCoins} className="info-icon" />
+                <span>{cost}</span>
+              </div>
+
+              :
+
+              cost === 1 ?
+                <div className="info-item-cost1">
+                  <FontAwesomeIcon icon={faCoins} className="info-icon" />
+                  <span>{cost}</span>
+                </div>
+
+                :
+
+                cost === 2 ?
+                  <div className="info-item-cost2">
+                    <FontAwesomeIcon icon={faCoins} className="info-icon" />
+                    <span>{cost}</span>
+                  </div>
+
+                  :
+                  <div className="info-item-cost3">
+                    <FontAwesomeIcon icon={faCoins} className="info-icon" />
+                    <span>{cost}</span>
+                  </div>
+            }
+
           </div>
         </div>
       </div>

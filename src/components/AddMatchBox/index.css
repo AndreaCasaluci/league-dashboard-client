@@ -9,47 +9,54 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  
+
 }
 
-.add-match-box h3{
-    margin:0 auto;
-    padding:0;
+.add-match-box h3 {
+  color: white;
+}
+
+.add-match-box h3 {
+  margin: 0 auto;
+  padding: 0;
 }
 
 .player-list {
-    list-style: none; /* Rimuovi i punti elenco */
-    padding: 0;
-    margin: 0;
-  }
-  
-  .player-list li {
-    margin-bottom: 5px; /* Spaziatura tra i giocatori */
-    /* Aggiungi ulteriori stili desiderati per ciascun giocatore */
-    background-color: #ccc;
-    text-align: center;
-    border-radius: 5px;
-    color: #333;
-    max-height: 14px;
-    font-size: 12px;
-  }
+  list-style: none;
+  /* Rimuovi i punti elenco */
+  padding: 0;
+  margin: 0;
+}
+
+.player-list li {
+  margin-bottom: 5px;
+  /* Spaziatura tra i giocatori */
+  /* Aggiungi ulteriori stili desiderati per ciascun giocatore */
+  background-color: #ccc;
+  text-align: center;
+  border-radius: 5px;
+  color: #333;
+  max-height: 14px;
+  font-size: 12px;
+}
 
 .custom-select {
-    padding-top: 0; /* Rimuovi il margine superiore */
-  }
+  padding-top: 0;
+  /* Rimuovi il margine superiore */
+}
 
 
-.team-box{
-    padding-top: 10px;
-    display: flex;
-    gap:40px;
+.team-box {
+  padding-top: 10px;
+  display: flex;
+  gap: 40px;
 }
 
 .react-select__control {
-    padding: 0;
-    margin: 0;
-  }
-  
+  padding: 0;
+  margin: 0;
+}
+
 
 
 .add-match-box:hover {
@@ -113,17 +120,17 @@
 }
 
 .add-match-box .fa-icon {
-    margin: 0 auto;
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;
-  }
-  
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
 .add-match-box .fa-icon2 {
-    margin: 0 auto;
-    width: 20px;
-    height: 20px;
-    padding-right: 5px;
-    padding-left: 1px;
-    vertical-align: middle;
-  }
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+  padding-left: 1px;
+  vertical-align: middle;
+}

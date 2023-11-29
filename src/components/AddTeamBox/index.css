@@ -1,90 +1,93 @@
 /* AddTeamBox.css */
 
 .add-team-box {
-    background-color: #333;
-    color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px 5px #222222e6;
-    margin: 0 auto;
-    max-width: 300px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .add-team-box:hover {
-    transition: 0.2s;
-    box-shadow: 0px 0px 12px 7px #222222e6;
-  }
-  
-  .add-team-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    text-align: center;
-    border-radius: 5px;
-    padding-right: 10px;
-  }
-  
-  .add-team-box h3:hover {
-    transition: 0.2s;
-    transform: translateY(-3px);
-    box-shadow: 0px 0px 10px 5px #222222e6;
-    background-color: #5b5a5a;
-  }
-  
-  .add-team-box form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .add-team-box label {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .add-team-box select,
-  .add-team-box input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-team-box h3 {
+  color: white;
+}
+
+.add-team-box:hover {
+  transition: 0.2s;
+  box-shadow: 0px 0px 12px 7px #222222e6;
+}
+
+.add-team-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.add-team-box h3:hover {
+  transition: 0.2s;
+  transform: translateY(-3px);
+  box-shadow: 0px 0px 10px 5px #222222e6;
+  background-color: #5b5a5a;
+}
+
+.add-team-box form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.add-team-box label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.add-team-box select,
+.add-team-box input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 
-  
-  
-  .add-team-box button {
-    background-color: #6e78f7;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  .add-team-box button:hover {
-    background-color: #0056b3;
-  }
-  
-  .add-team-box .fa-icon {
-    margin: 0 auto;
-    width: 15px;
-    height: 15px;
-    vertical-align: middle;
-  }
-  
-  .add-team-box .fa-icon2 {
-    margin: 0 auto;
-    width: 25px;
-    height: 25px;
-    padding-right: 5px;
-    padding-left: 1px;
-    vertical-align: middle;
-    padding-top: 3px;
-  }
-  
+
+
+.add-team-box button {
+  background-color: #6e78f7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-team-box button:hover {
+  background-color: #0056b3;
+}
+
+.add-team-box .fa-icon {
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.add-team-box .fa-icon2 {
+  margin: 0 auto;
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+  padding-left: 1px;
+  vertical-align: middle;
+  padding-top: 3px;
+}

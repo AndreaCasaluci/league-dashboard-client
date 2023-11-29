@@ -60,19 +60,21 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                 </div>
                 <div className='center-div'>
                     <div className='left-team-container'>
-                        <img src={teamALogo} className='team-logo'></img>
+                        {/* <img src={teamALogo} className='team-logo'></img> */}
                         <p className='team-name'>{teamAName}</p>
+                        <img src={teamALogo} className='team-logo'></img>
                     </div>
 
                     {matchStatus === 'played' ?
-                        <div className='result'>{result}</div>
+                        <div className='result'><b>{result}</b></div>
                         :
                         <div className='vs'>vs</div>
                     }
 
                     <div className='right-team-container'>
-                        <p className='team-name'>{teamBName}</p>
                         <img src={teamBLogo} className='team-logo'></img>
+                        <p className='team-name'>{teamBName}</p>
+                        {/* <img src={teamBLogo} className='team-logo'></img> */}
                     </div>
                 </div>
                 <div className='right-div'>

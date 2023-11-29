@@ -50,6 +50,8 @@ const AddPlayerBox = () => {
       cost,
     };
 
+    console.log(data);
+
     try {
       if (data.cost < 0) {
         alert("Error: Player Cost cannot be negative!");
@@ -67,7 +69,7 @@ const AddPlayerBox = () => {
         alert("Error: you must select a Team!");
         return;
       }
-      const response = await fetch('/player/addPlayer', {
+      const response = await fetch('http://localhost:5000/player/addPlayer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -116,7 +118,7 @@ const AddPlayerBox = () => {
           id="selectedTeam"
           className="select-field"
           value={selectedTeam}
-          options={teams.map((team) => ({ value: team, label: team, name: team }))}
+          options={teams.map((team) => ({ value: team, label: team.value, name: team.value }))}
           styles={customStyles} // Applica gli stili personalizzati alla select
           onChange={(selectedOption) => setSelectedTeam(selectedOption)}
         />
@@ -130,7 +132,7 @@ const AddPlayerBox = () => {
           onChange={(e) => setCost(parseFloat(e.target.value))}
         />
 
-        <button type="submit" className="submit-button">
+        <button onClick={handleSubmit} type="submit" className="submit-button">
           Add Player
         </button>
       </form>

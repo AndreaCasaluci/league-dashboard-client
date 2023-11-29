@@ -72,8 +72,8 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
     } catch (error) {
         console.error('Errore nel recupero dei dati:', error);
     } finally {
-        console.log(section);
-        setLoading(false);
+        setTimeout(() => { setLoading(false) }, 1000);
+        /* setLoading(false); */
     }
 }
 

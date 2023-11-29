@@ -1,13 +1,19 @@
-.container {
+.adm-container {
   display: flex;
   align-items: center;
   /* Allinea al centro orizzontalmente */
   justify-content: center;
   /* Allinea al centro verticalmente */
-  gap: 20px;
+  gap: 100px;
   /* Aggiunge spazio tra i componenti */
   align-items: flex-start;
 }
 
 /* Stili per i componenti (AddPlayerBox e AddTeamBox) */
 /* Aggiungi stili personalizzati secondo le tue esigenze */
+
+.adm-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
