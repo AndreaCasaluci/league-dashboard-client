@@ -59,8 +59,8 @@ const AddTeamBox = () => {
 
   const validateFileSize = (file) => {
     // Controlla se il file supera i 200KB (200 * 1024 bytes)
-    if (file.size > 200000) {
-      setFileSizeError('Error: Team Logo must be less than 200KB');
+    if (file.size > 350000) {
+      setFileSizeError('Error: Team Logo must be less than 350KB');
       return false;
     } else {
       setFileSizeError('');
@@ -149,7 +149,7 @@ const AddTeamBox = () => {
         />
 
         {/* Aggiunto il campo per caricare il logo */}
-        <label htmlFor="logoFile">Team Logo (max 200KB):</label>
+        <label htmlFor="logoFile">Team Logo (max 350KB):</label>
         <input
           type="file"
           id="logoFile"
