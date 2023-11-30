@@ -17,7 +17,7 @@ const AddTOTW = () => {
 
         // Implementa la logica per aggiungere i nomi dei giocatori alla collezione "teamOfTheWeek"
         try {
-            const response = await fetch('https://competitivefutsal.it:5000/team/addTOTW', {
+            const response = await fetch('http://competitivefutsal.it:5000/team/addTOTW', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

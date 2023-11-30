@@ -1,6 +1,6 @@
 const fetchPlayers = async (setPlayers) => {
     try {
-        const response = await fetch('https://competitivefutsal.it:5000/player/players');
+        const response = await fetch('http://competitivefutsal.it:5000/player/players');
         if (response.ok) {
             const data = await response.json();
             setPlayers(data);
@@ -16,7 +16,7 @@ const fetchPlayers = async (setPlayers) => {
 const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboardData, setGoalLeaderboardData, setAssistLeaderboardData, setCleansheetLeaderboardData, setSection, setLoading) => {
     try {
         if (section === 'Players') {
-            let url = "https://competitivefutsal.it:5000/player/players";  // Assicurati di avere la route corretta nel tuo backend
+            let url = "http://competitivefutsal.it:5000/player/players";  // Assicurati di avere la route corretta nel tuo backend
 
             const response = await fetch(url);
             if (response.ok) {
@@ -25,7 +25,7 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
             }
         }
         else if (section === 'LeagueLeaderboard') {
-            let url = "https://competitivefutsal.it:5000/leaderboard/league";
+            let url = "http://competitivefutsal.it:5000/leaderboard/league";
 
             const response = await fetch(url);
             if (response.ok) {
@@ -34,7 +34,7 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
             }
         }
         else if (section === 'GoalLeaderboard') {
-            let url = "https://competitivefutsal.it:5000/leaderboard/goal";
+            let url = "http://competitivefutsal.it:5000/leaderboard/goal";
 
             const response = await fetch(url);
             if (response.ok) {
@@ -43,7 +43,7 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
             }
         }
         else if (section === 'AssistLeaderboard') {
-            let url = "https://competitivefutsal.it:5000/leaderboard/assist";
+            let url = "http://competitivefutsal.it:5000/leaderboard/assist";
 
             const response = await fetch(url);
             if (response.ok) {
@@ -52,7 +52,7 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
             }
         }
         else if (section === 'CleansheetLeaderboard') {
-            let url = "https://competitivefutsal.it:5000/leaderboard/cleansheet";
+            let url = "http://competitivefutsal.it:5000/leaderboard/cleansheet";
 
             const response = await fetch(url);
             if (response.ok) {
@@ -79,7 +79,7 @@ const fetchData = async (section, isLogged, setPlayersData, setLeagueLeaderboard
 
 const fetchTeams = async (setTeams) => {
     // Effettua una richiesta al backend per ottenere la lista delle squadre
-    fetch('https://competitivefutsal.it:5000/team/teams')
+    fetch('http://competitivefutsal.it:5000/team/teams')
         .then((response) => response.json())
         .then((data) => {
             // Rimuovi il team "Free Agent" dall'array data
@@ -95,7 +95,7 @@ const fetchTeams = async (setTeams) => {
 
 const fetchPlayersByTeam = async (teamX, setPlayersTeamX, setStatsTeamX) => {
     // Effettua una richiesta al backend per ottenere la lista dei giocatori del team A
-    fetch(`https://competitivefutsal.it:5000/player/playersByTeam/${teamX.value}`)
+    fetch(`http://competitivefutsal.it:5000/player/playersByTeam/${teamX.value}`)
         .then((response) => response.json())
         .then((data) => setPlayersTeamX(data.map((player) => ({ value: player, label: player }))))
         .catch((error) => console.error('Errore nel recupero dei giocatori:', error));
@@ -105,7 +105,7 @@ const fetchPlayersByTeam = async (teamX, setPlayersTeamX, setStatsTeamX) => {
 }
 
 const fetchPlayersWithNoTeam = async (setPlayersWithoutTeam) => {
-    fetch('https://competitivefutsal.it:5000/player/playersWithoutTeam')
+    fetch('http://competitivefutsal.it:5000/player/playersWithoutTeam')
         .then((response) => response.json())
         .then((data) => setPlayersWithoutTeam(data))
         .catch((error) => console.error('Errore nel recupero dei giocatori senza squadra:', error));
@@ -114,7 +114,7 @@ const fetchPlayersWithNoTeam = async (setPlayersWithoutTeam) => {
 
 const fetchTOTW = async (setTeamOfTheWeeks, setSelectedWeek) => {
     try {
-        const response = await fetch('https://competitivefutsal.it:5000/team/teamOfTheWeeks');
+        const response = await fetch('http://competitivefutsal.it:5000/team/teamOfTheWeeks');
         if (response.ok) {
             const data = await response.json();
             setTeamOfTheWeeks(data);
@@ -132,7 +132,7 @@ const fetchTOTW = async (setTeamOfTheWeeks, setSelectedWeek) => {
 
 const fetchMatchdays = async (setMatchdays) => {
     try {
-        const response = await fetch('https://competitivefutsal.it:5000/match/matchdays');
+        const response = await fetch('http://competitivefutsal.it:5000/match/matchdays');
         if (response.ok) {
             const data = await response.json();
             console.log(data);

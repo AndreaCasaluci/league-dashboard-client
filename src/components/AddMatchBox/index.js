@@ -230,7 +230,7 @@ const AddMatchBox = () => {
 
 
     // Invia i dati delle statistiche e del risultato al backend per aggiungere il match al database
-    fetch('https://competitivefutsal.it:5000/match/addMatch', {
+    fetch('http://competitivefutsal.it:5000/match/addMatch', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
