@@ -5,7 +5,7 @@ import { faCoins, faUsers, faCalendarAlt, faTrophy } from '@fortawesome/free-sol
 import './index.css'; // Importa il tuo file CSS
 
 const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, logoFileName, leaderboardPosition }) => {
-  const teamLogoPath = require(`/teamLogos/${logoFileName}`);
+  /* const teamLogoPath = require(`/teamLogos/${logoFileName}`); */
   const captainIconPath = require(`./captain_icon.png`);
   const date = new Date(foundationDate);
   let month = date.getMonth() + 1;

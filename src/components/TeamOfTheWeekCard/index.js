@@ -6,7 +6,7 @@ import './index.css'; // Importa il tuo file CSS
 const TeamOfTheWeekCard = ({ role, teamLogo, playerAvatar, playerName }) => {
 
   /* console.log(teamLogoFileName);*/
-  const teamLogoPath = require("/teamLogos/" + teamLogo);
+  /*  const teamLogoPath = require("/teamLogos/" + teamLogo); */
 
   return (
     <div className="team-of-the-week-card">
