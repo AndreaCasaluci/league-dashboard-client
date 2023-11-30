@@ -20,8 +20,8 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
         const teamBLogoPath = require(`/teamLogos/${tmpTeamBLogo}.png`);
         setTeamALogo(teamALogoPath);
         setTeamBLogo(teamBLogoPath);
-        setActualTeamALogo(`/teamLogos/${tmpTeamALogo}.png`);
-        setActualTeamBLogo(`/teamLogos/${tmpTeamBLogo}.png`);
+        setActualTeamALogo(`https://competitivefutsal.it/teamLogos/${tmpTeamALogo}.png`);
+        setActualTeamBLogo(`https://competitivefutsal.it/teamLogos/${tmpTeamBLogo}.png`);
         if (replayLink) {
             if (!replayLink.startsWith("http://") && !replayLink.startsWith("https://")) setActualReplayLink("https://" + replayLink)
         }

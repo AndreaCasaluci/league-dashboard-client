@@ -13,7 +13,7 @@ const PlayerCard = ({ playerName, team, goals, assists, cleansheets, playtime, c
       <div className='top-row'>
         <div className='left-empty-box'></div>
         <div className='player-name'><AutoTextSize maxFontSizePx={18} className='player-name2'>{playerName}</AutoTextSize></div>
-        <div className='right-logo-box'>{teamLogoFileName && <img src={`/teamLogos/${teamLogoFileName}`} alt={`${team} Logo`} className="team-logo" />}</div>
+        <div className='right-logo-box'>{teamLogoFileName && <img src={`https://competitivefutsal.it/teamLogos/${teamLogoFileName}`} alt={`${team} Logo`} className="team-logo" />}</div>
       </div>
 
 

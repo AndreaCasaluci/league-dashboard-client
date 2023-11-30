@@ -9,7 +9,7 @@ const LeaderboardTeamNameLogo = (teamName) => {
 
     return (
         <div className='team-name-logo'>
-            <div className='team-name'><img src={`/teamLogos/${teamLogoFileName}.png`} className='team-logo'></img><b>{teamName.teamName}</b></div>
+            <div className='team-name'><img src={`https://competitivefutsal.it/teamLogos/${teamLogoFileName}.png`} className='team-logo'></img><b>{teamName.teamName}</b></div>
         </div>
     )
 }
