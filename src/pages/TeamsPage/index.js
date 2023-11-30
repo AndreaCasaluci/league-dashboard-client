@@ -17,7 +17,7 @@ const TeamsPage = () => {
   useEffect(() => {
     async function fetchTeams() {
       try {
-        const response = await fetch('http://competitivefutsal.it:443/team/teamsPage'); // Assicurati che l'endpoint del backend sia corretto
+        const response = await fetch('https://competitivefutsal.it:8443/team/teamsPage'); // Assicurati che l'endpoint del backend sia corretto
         if (response.ok) {
           const data = await response.json();
           setTeams(data);

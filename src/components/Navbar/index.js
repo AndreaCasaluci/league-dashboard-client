@@ -6,6 +6,8 @@ import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 //@fortawesome/fontawesome-svg-core
 
+//npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons @fortawesome/fontawesome-svg-core
+
 const Navbar = ({ setSection, activeSection }) => {
   const handleSectionChange = (newSection) => {
     setSection(newSection);

@@ -95,7 +95,7 @@ const AddTeamBox = () => {
         return;
       }
 
-      const response = await axios.post('http://competitivefutsal.it:443/team/addTeam', formData, {
+      const response = await axios.post('https://competitivefutsal.it:8443/team/addTeam', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

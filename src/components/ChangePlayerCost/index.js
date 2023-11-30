@@ -57,7 +57,7 @@ const ChangePlayerCostBox = () => {
 
         try {
 
-            const response = await fetch('http://competitivefutsal.it:443/player/changeCost', {
+            const response = await fetch('https://competitivefutsal.it:8443/player/changeCost', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

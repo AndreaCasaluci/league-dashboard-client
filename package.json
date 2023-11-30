@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "http://competitivefutsal.it:443",
+  "proxy": "https://competitivefutsal.it:8443",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

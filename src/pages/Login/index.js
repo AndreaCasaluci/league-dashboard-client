@@ -12,7 +12,7 @@ const Login = ({ setIsLogged, setSection, setGlobalUsername }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://competitivefutsal.it:5000/login', {
+      const response = await axios.post('https://competitivefutsal.it:8443/login', {
         username,
         password,
       });
