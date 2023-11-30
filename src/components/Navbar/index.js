@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFutbol, faTrophy, faHandshake, faMitten, faPersonRunning, faPeopleGroup, faRankingStar, faHouse, faCalendarDays, faScrewdriverWrench, faAward } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
+//@fortawesome/fontawesome-svg-core
+
 const Navbar = ({ setSection, activeSection }) => {
   const handleSectionChange = (newSection) => {
     setSection(newSection);
