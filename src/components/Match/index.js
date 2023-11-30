@@ -16,8 +16,8 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
     useEffect(() => {
         let tmpTeamALogo = teamAName.replace(/\s/g, "_");
         let tmpTeamBLogo = teamBName.replace(/\s/g, "_");
-        const teamALogoPath = require(`/teamLogos/${tmpTeamALogo}.png`);
-        const teamBLogoPath = require(`/teamLogos/${tmpTeamBLogo}.png`);
+        const teamALogoPath = require(`https://competitivefutsal.it/teamLogos/${tmpTeamALogo}.png`);
+        const teamBLogoPath = require(`https://competitivefutsal.it/teamLogos/${tmpTeamBLogo}.png`);
         setTeamALogo(teamALogoPath);
         setTeamBLogo(teamBLogoPath);
         setActualTeamALogo(`https://competitivefutsal.it/teamLogos/${tmpTeamALogo}.png`);
