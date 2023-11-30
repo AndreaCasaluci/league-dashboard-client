@@ -37,7 +37,7 @@ const AddPlayerBox = () => {
   };
 
   useEffect(() => {
-    actions.fetchTeams(setTeams);
+    actions.fetchAllTeams(setTeams);
   }, []);
 
   const handleSubmit = async (e) => {
