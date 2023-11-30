@@ -37,7 +37,7 @@ const TransferPlayerBox = () => {
     };
 
     useEffect(() => {
-        actions.fetchTeams(setTeams);
+        actions.fetchAllTeams(setTeams);
         console.log(teams);
         actions.fetchPlayers(setPlayers);
     }, []);

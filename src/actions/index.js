@@ -93,6 +93,19 @@ const fetchTeams = async (setTeams) => {
         .catch((error) => console.error('Errore nel recupero delle squadre:', error));
 }
 
+const fetchAllTeams = async (setTeams) => {
+    // Effettua una richiesta al backend per ottenere la lista delle squadre
+    fetch('https://competitivefutsal.it:8443/team/teams')
+        .then((response) => response.json())
+        .then((data) => {
+            // Mappa il risultato filtrato in oggetti da utilizzare con setTeams
+            const teamsData = filteredData.map((team) => ({ value: team, label: team }));
+
+            setTeams(teamsData);
+        })
+        .catch((error) => console.error('Errore nel recupero delle squadre:', error));
+}
+
 const fetchPlayersByTeam = async (teamX, setPlayersTeamX, setStatsTeamX) => {
     // Effettua una richiesta al backend per ottenere la lista dei giocatori del team A
     fetch(`https://competitivefutsal.it:8443/player/playersByTeam/${teamX.value}`)
@@ -147,4 +160,4 @@ const fetchMatchdays = async (setMatchdays) => {
 
 
 
-export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW, fetchMatchdays }
+export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW, fetchMatchdays, fetchAllTeams }
