@@ -4,7 +4,7 @@ import './index.css'
 const LeaderboardTeamNameLogo = (teamName) => {
     let tmpTeamName = teamName.teamName;
     let teamLogoFileName = tmpTeamName.replace(/\s/g, "_");
-    const teamLogo = require(`../../../../teamLogos/${teamLogoFileName}.png`);
+    const teamLogo = require(`/teamLogos/${teamLogoFileName}.png`);
 
 
     return (

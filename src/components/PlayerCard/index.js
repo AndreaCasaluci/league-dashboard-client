@@ -6,7 +6,7 @@ import { faCoins, faFutbol, faHandshake, faMitten, faStopwatch, faUsers } from '
 import './index.css'; // Importa lo stile CSS
 
 const PlayerCard = ({ playerName, team, goals, assists, cleansheets, playtime, cost, teamLogoFileName }) => {
-  const teamLogoPath = require(`../../../../teamLogos/${teamLogoFileName}`);
+  const teamLogoPath = require(`/teamLogos/${teamLogoFileName}`);
 
   return (
     <div className="player-card">

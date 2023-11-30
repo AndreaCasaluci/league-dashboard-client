@@ -14,8 +14,8 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
     useEffect(() => {
         let tmpTeamALogo = teamAName.replace(/\s/g, "_");
         let tmpTeamBLogo = teamBName.replace(/\s/g, "_");
-        const teamALogoPath = require(`../../../../teamLogos/${tmpTeamALogo}.png`);
-        const teamBLogoPath = require(`../../../../teamLogos/${tmpTeamBLogo}.png`);
+        const teamALogoPath = require(`/teamLogos/${tmpTeamALogo}.png`);
+        const teamBLogoPath = require(`/teamLogos/${tmpTeamBLogo}.png`);
         setTeamALogo(teamALogoPath);
         setTeamBLogo(teamBLogoPath);
         if (replayLink) {

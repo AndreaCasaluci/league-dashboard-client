@@ -99,7 +99,7 @@ const fetchAllTeams = async (setTeams) => {
         .then((response) => response.json())
         .then((data) => {
             // Mappa il risultato filtrato in oggetti da utilizzare con setTeams
-            const teamsData = filteredData.map((team) => ({ value: team, label: team }));
+            const teamsData = data.map((team) => ({ value: team, label: team }));
 
             setTeams(teamsData);
         })
