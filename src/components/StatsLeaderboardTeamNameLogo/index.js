@@ -9,7 +9,7 @@ const StatsLeaderboardTeamNameLogo = (teamName) => {
 
     return (
         <div className='stats-team-name-logo'>
-            <img src={teamLogo} className='team-logo2'></img>
+            <img src={`/teamLogos/${teamLogoFileName}.png`} className='team-logo2'></img>
             <div className='team-name2'>{teamName.teamName}</div>
         </div>
     )

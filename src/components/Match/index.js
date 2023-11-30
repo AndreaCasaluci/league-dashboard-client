@@ -8,6 +8,8 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
     const [teamBLogo, setTeamBLogo] = useState('');
     const [actualReplayLink, setActualReplayLink] = useState(replayLink);
     const [expandedMatch, setExpandedMatch] = useState(false);
+    const [actualTeamALogo, setActualTeamALogo] = useState('');
+    const [actualTeamBLogo, setActualTeamBLogo] = useState('');
 
 
 
@@ -18,6 +20,8 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
         const teamBLogoPath = require(`/teamLogos/${tmpTeamBLogo}.png`);
         setTeamALogo(teamALogoPath);
         setTeamBLogo(teamBLogoPath);
+        setActualTeamALogo(`/teamLogos/${tmpTeamALogo}.png`);
+        setActualTeamBLogo(`/teamLogos/${tmpTeamBLogo}.png`);
         if (replayLink) {
             if (!replayLink.startsWith("http://") && !replayLink.startsWith("https://")) setActualReplayLink("https://" + replayLink)
         }
@@ -62,7 +66,7 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                     <div className='left-team-container'>
                         {/* <img src={teamALogo} className='team-logo'></img> */}
                         <p className='team-name'>{teamAName}</p>
-                        <img src={teamALogo} className='team-logo'></img>
+                        <img src={actualTeamALogo} className='team-logo'></img>
                     </div>
 
                     {matchStatus === 'played' ?
@@ -72,7 +76,7 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                     }
 
                     <div className='right-team-container'>
-                        <img src={teamBLogo} className='team-logo'></img>
+                        <img src={actualTeamBLogo} className='team-logo'></img>
                         <p className='team-name'>{teamBName}</p>
                         {/* <img src={teamBLogo} className='team-logo'></img> */}
                     </div>
