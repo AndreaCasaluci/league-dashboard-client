@@ -1,6 +1,6 @@
 const fetchPlayers = async (setPlayers) => {
     try {
-        const response = await fetch('https://competitivefutsal.it:443/player/players');
+        const response = await fetch('https://competitivefutsal.it:8443/player/players');
         if (response.ok) {
             const data = await response.json();
             setPlayers(data);
