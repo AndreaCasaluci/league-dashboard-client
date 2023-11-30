@@ -53,7 +53,7 @@ const TransferPlayerBox = () => {
 
         try {
 
-            const response = await fetch('http://localhost:5000/player/transferPlayer', {
+            const response = await fetch('http://competitivefutsal.it:5000/player/transferPlayer', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

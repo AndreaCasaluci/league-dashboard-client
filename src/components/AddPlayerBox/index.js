@@ -69,7 +69,7 @@ const AddPlayerBox = () => {
         alert("Error: you must select a Team!");
         return;
       }
-      const response = await fetch('http://localhost:5000/player/addPlayer', {
+      const response = await fetch('http://competitivefutsal.it:5000/player/addPlayer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
