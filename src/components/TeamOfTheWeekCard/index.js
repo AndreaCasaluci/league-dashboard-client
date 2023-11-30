@@ -13,7 +13,7 @@ const TeamOfTheWeekCard = ({ role, teamLogo, playerAvatar, playerName }) => {
       <div className='top-role-logo'>
         <div className="top-left">{role}</div>
         <div className="top-right">
-          <img src={"/teamLogos/" + teamLogo} alt="Team Logo" className="team-logo" />
+          <img src={"https://competitivefutsal.it/teamLogos/" + teamLogo} alt="Team Logo" className="team-logo" />
         </div>
       </div>
       <div className="center">

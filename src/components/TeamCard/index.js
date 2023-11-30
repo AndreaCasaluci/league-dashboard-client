@@ -23,7 +23,7 @@ const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, log
       <div className='team-name-container'>
         <div className='left-void-block'></div>
         <div className='team-name'><h3 className='team-title'>{teamName}</h3></div>
-        <div className='team-logo-container'> <img src={`/teamLogos/${logoFileName}`} alt={`${teamName} Logo`} className="team-logo" /></div>
+        <div className='team-logo-container'> <img src={`https://competitivefutsal.it/teamLogos/${logoFileName}`} alt={`${teamName} Logo`} className="team-logo" /></div>
       </div>
       <div className="team-info">
         <div className="info-box">
