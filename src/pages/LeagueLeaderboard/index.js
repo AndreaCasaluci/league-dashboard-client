@@ -34,7 +34,7 @@ const LeagueLeaderboard = ({ classifica }) => {
 
 
 
-                  <tr key={index} className={index < 7 ? 'top-teams' : index >= classifica.length - 1 ? 'last-row' : ''}>
+                  <tr key={index} className={index < 6 ? 'top-teams' : index >= classifica.length - 1 ? 'last-row' : ''}>
                     <td><b>{index + 1}</b></td>
                     <td><b><LeaderboardTeamNameLogo teamName={squadra.team} /></b></td>
                     <td>{squadra.matches}</td>
