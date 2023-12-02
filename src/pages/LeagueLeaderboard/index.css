@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 140px;
-    margin-right: 140px;
+    margin-left: 60px;
+    margin-right: 50px;
 }
 
 td {
@@ -101,8 +101,8 @@ table tr:last-child td:last-child {
     display: flex;
     align-items: center;
     margin-left: 10px;
-    margin-bottom: 50px;
-    margin-top: 20px;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 .league-leaderboard-page .title-text {
