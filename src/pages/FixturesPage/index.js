@@ -56,6 +56,7 @@ const FixturesPage = () => {
                                     replayLink={match.replay}
                                     wildcard={match.wildcard}
                                     defwin={match.defwin}
+                                    time={match.time}
                                 ></Match>
 
                             </>

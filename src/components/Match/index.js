@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faShieldHeart, faChartSimple, faStopwatch, faFutbol, faHandshake, faMitten, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './index.css';
 
-function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTeamB, replayLink, wildcard, defwin }) {
+function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTeamB, replayLink, wildcard, defwin, time }) {
     const [teamALogo, setTeamALogo] = useState('');
     const [teamBLogo, setTeamBLogo] = useState('');
     const [actualReplayLink, setActualReplayLink] = useState(replayLink);
@@ -72,7 +72,14 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                     {matchStatus === 'played' ?
                         <div className='result'><b>{result}</b></div>
                         :
-                        <div className='vs'>vs</div>
+                        <div className='vs'>
+                            {time != null && time != undefined ?
+                                time
+                                :
+                                "vs"
+                            }
+
+                        </div>
                     }
 
                     <div className='right-team-container'>

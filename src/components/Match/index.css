@@ -38,7 +38,7 @@
     align-content: center;
     align-items: center;
     padding-left: 20px;
-    min-width: 80px;
+    width: 100px;
 }
 
 .match-container .wildcard-icon {
@@ -79,7 +79,7 @@
     justify-content: space-around;
     align-items: center;
     padding-right: 20px;
-    min-width: 80px;
+    width: 100px;
 }
 
 .match-container .team-logo {
@@ -170,19 +170,19 @@ h4 {
 
 
 .center-div {
-    width: 600px;
+    width: 800px;
     display: flex;
     justify-content: center;
 }
 
 .right-team-container {
-    width: 250px;
+    width: 350px;
     display: flex;
     justify-content: flex-start !important;
 }
 
 .left-team-container {
-    width: 250px;
+    width: 350px;
     display: flex;
     justify-content: flex-end !important;
 }
