@@ -134,3 +134,12 @@
   padding-left: 1px;
   vertical-align: middle;
 }
+
+.penalty-container {
+  display: flex;
+}
+
+.penalty-container .check-box {
+  width: 27px;
+  height: 27px;
+}

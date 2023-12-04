@@ -19,6 +19,7 @@ const AddMatchBox = () => {
   const [resultTeamA, setResultTeamA] = useState(0);
   const [resultTeamB, setResultTeamB] = useState(0);
   const [replay1, setReplay1] = useState('');
+  const [penalty, setPenalty] = useState(false);
 
 
   const customStyles = {
@@ -140,6 +141,7 @@ const AddMatchBox = () => {
       resultTeamA: resultTeamA,
       resultTeamB: resultTeamB,
       replay1: replay1,
+      penalty: penalty,
     };
 
     /* console.log(matchData); */
@@ -433,6 +435,16 @@ const AddMatchBox = () => {
           value={replay1}
           onChange={(e) => setReplay1(e.target.value)}
         />
+      </div>
+      <div className="penalty-container">
+        <label>Penalty (for Losing Team):</label>
+        <div className='check-box'>
+          <input
+            type="checkbox"
+            checked={penalty}
+            onChange={(e) => setPenalty(e.target.checked)}
+          />
+        </div>
       </div>
 
 
