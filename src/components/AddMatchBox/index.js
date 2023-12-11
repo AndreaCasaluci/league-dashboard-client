@@ -51,12 +51,14 @@ const AddMatchBox = () => {
 
   useEffect(() => {
     if (teamA) {
+      console.log(teamA.value);
       actions.fetchPlayersByTeam(teamA, setPlayersTeamA, setStatsTeamA);
     }
   }, [teamA]);
 
   useEffect(() => {
     if (teamB) {
+      console.log(teamB.value);
       actions.fetchPlayersByTeam(teamB, setPlayersTeamB, setStatsTeamB);
     }
   }, [teamB]);
@@ -213,7 +215,7 @@ const AddMatchBox = () => {
       return;
     }
 
-    if (totCSA > 1) {
+    /* if (totCSA > 1) {
       alert("Error: there is more than one cleansheet for players in Team A!");
       return;
     }
@@ -228,7 +230,7 @@ const AddMatchBox = () => {
     if (totCSB === 1 && totGoalA > 0) {
       alert("Error: you selected a cleansheet for Team B but Team A scored " + totGoalA + " goal!");
       return;
-    }
+    } */
 
 
     // Invia i dati delle statistiche e del risultato al backend per aggiungere il match al database
@@ -325,13 +327,11 @@ const AddMatchBox = () => {
               </div>
               <div>
                 <label>Cleansheet:</label>
-                <select
-                  value={statsTeamA[selectedPlayerTeamA.value]?.cleansheet || 'false'}
+                <input
+                  type="number"
+                  value={statsTeamA[selectedPlayerTeamA.value]?.cleansheet || ''}
                   onChange={(e) => handleStatsSubmit('A', selectedPlayerTeamA, { cleansheet: e.target.value })}
-                >
-                  <option value="true">True</option>
-                  <option value="false">False</option>
-                </select>
+                />
               </div>
               {/* Add more statistic fields as needed */}
             </div>
@@ -393,14 +393,20 @@ const AddMatchBox = () => {
                 />
               </div>
               <div>
-                <label>Cleansheet:</label>
+                {/* <label>Cleansheet:</label>
                 <select
                   value={statsTeamB[selectedPlayerTeamB.value]?.cleansheet || 'false'}
                   onChange={(e) => handleStatsSubmit('B', selectedPlayerTeamB, { cleansheet: e.target.value })}
                 >
                   <option value="true">True</option>
                   <option value="false">False</option>
-                </select>
+                </select> */}
+                <label>Cleansheet:</label>
+                <input
+                  type="number"
+                  value={statsTeamB[selectedPlayerTeamB.value]?.cleansheet || ''}
+                  onChange={(e) => handleStatsSubmit('B', selectedPlayerTeamB, { cleansheet: e.target.value })}
+                />
               </div>
               {/* Add more statistic fields as needed */}
             </div>

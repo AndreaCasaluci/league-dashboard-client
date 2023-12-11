@@ -42,7 +42,9 @@ const FixturesPage = () => {
             {Object.entries(groupedMatches).map(([matchday, matches]) => (
                 <div key={matchday} className="matchday-container">
                     {/* <h3>Matchday {matchday}</h3> */}
-                    <p className='matchday-title'>Matchday {matchday}</p>
+                    <div className='matchday-title'>
+                        <p className='inner-title'>Matchday {matchday}</p>
+                    </div>
                     <div className='matches'>
                         {matches.map((match, matchIndex) => (
                             <>
