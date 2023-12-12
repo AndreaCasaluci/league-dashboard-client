@@ -106,7 +106,7 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                                 <p><FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s</p>
                                 {stats.goal ? <p><FontAwesomeIcon icon={faFutbol} /> {stats.goal}</p> : null}
                                 {stats.assist ? <p><FontAwesomeIcon icon={faHandshake} /> {stats.assist}</p> : null}
-                                {stats.cleansheet > 0 ? <p><FontAwesomeIcon icon={faMitten} /> CS</p> : null}
+                                {stats.cleansheet > 0 ? <p><FontAwesomeIcon icon={faMitten} />{stats.cleansheet} CS</p> : null}
                             </div>
                         ))}
                     </div>
@@ -118,7 +118,7 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                                 <p><FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s</p>
                                 {stats.goal ? <p><FontAwesomeIcon icon={faFutbol} /> {stats.goal}</p> : null}
                                 {stats.assist ? <p><FontAwesomeIcon icon={faHandshake} /> {stats.assist}</p> : null}
-                                {stats.cleansheet > 0 ? <p><FontAwesomeIcon icon={faMitten} /> CS</p> : null}
+                                {stats.cleansheet > 0 ? <p><FontAwesomeIcon icon={faMitten} />{stats.cleansheet} CS</p> : null}
                             </div>
                         ))}
                     </div>

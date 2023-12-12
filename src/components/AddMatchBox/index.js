@@ -148,72 +148,72 @@ const AddMatchBox = () => {
 
     /* console.log(matchData); */
 
-    let totGoalA = 0, totGoalB = 0, totAssistA = 0, totAssistB = 0, totCSA = 0, totCSB = 0;
-    for (const playerName in statsTeamA) {
-      console.log(playerName);
-      const playerStats = statsTeamA[playerName];
-      if (playerStats.goals) {
-        if (playerStats.goals < 0) {
-          alert("Error: " + playerName + " cannot have a negative goal number!");
-          return;
-        }
-        totGoalA++;
-      }
-      if (playerStats.assists) {
-        if (playerStats.assists < 0) {
-          alert("Error: " + playerName + " cannot have a negative assist number!");
-          return;
-        }
-        totAssistA++;
-      }
-      if (playerStats.cleansheet) {
-        totCSA++;
-      }
-    }
-
-    for (const playerName in statsTeamB) {
-      const playerStats = statsTeamB[playerName];
-      if (playerStats.goals) {
-        if (playerStats.goals < 0) {
-          alert("Error: " + playerName + " cannot have a negative goal number!");
-          return;
-        }
-        totGoalB++;
-      }
-      if (playerStats.assists) {
-        if (playerStats.goals < 0) {
-          alert("Error: " + playerName + " cannot have a negative assist number!");
-          return;
-        }
-        totAssistB++;
-      }
-      if (playerStats.cleansheet) totCSB++;
-    }
-
-    if (totGoalA > resultTeamA) {
-      alert("Error: total goal scored from players (Team A) are higher than Team A score!");
-      return;
-    }
-    if (totAssistA > resultTeamA) {
-      alert("Error: total assist from players (Team A) are higher than Team A score!");
-      return;
-    }
-    if (totAssistA > totGoalA) {
-      alert("Error: total assist from players (Team A) are higher than total goals scored from players (Team A)!");
-      return;
-    }
-    if (totGoalB > resultTeamB) {
-      alert("Error: total goal scored from players (Team B) are higher than Team B score!");
-      return;
-    }
-    if (totAssistB > resultTeamB) {
-      alert("Error: total assist from players (Team B) are higher than Team B score!");
-      return;
-    }
-    if (totAssistB > totGoalB) {
-      alert("Error: total assist from players (Team B) are higher than total goals scored from players (Team B)!");
-      return;
-    }
+    /*  let totGoalA = 0, totGoalB = 0, totAssistA = 0, totAssistB = 0, totCSA = 0, totCSB = 0;
+     for (const playerName in statsTeamA) {
+       console.log(playerName);
+       const playerStats = statsTeamA[playerName];
+       if (playerStats.goals) {
+         if (playerStats.goals < 0) {
+           alert("Error: " + playerName + " cannot have a negative goal number!");
+           return;
+         }
+         totGoalA++;
+       }
+       if (playerStats.assists) {
+         if (playerStats.assists < 0) {
+           alert("Error: " + playerName + " cannot have a negative assist number!");
+           return;
+         }
+         totAssistA++;
+       }
+       if (playerStats.cleansheet) {
+         totCSA++;
+       }
+     }
+ 
+     for (const playerName in statsTeamB) {
+       const playerStats = statsTeamB[playerName];
+       if (playerStats.goals) {
+         if (playerStats.goals < 0) {
+           alert("Error: " + playerName + " cannot have a negative goal number!");
+           return;
+         }
+         totGoalB++;
+       }
+       if (playerStats.assists) {
+         if (playerStats.goals < 0) {
+           alert("Error: " + playerName + " cannot have a negative assist number!");
+           return;
+         }
+         totAssistB++;
+       }
+       if (playerStats.cleansheet) totCSB++;
+     }
+ 
+     if (totGoalA > resultTeamA) {
+       alert("Error: total goal scored from players (Team A) are higher than Team A score!");
+       return;
+     }
+     if (totAssistA > resultTeamA) {
+       alert("Error: total assist from players (Team A) are higher than Team A score!");
+       return;
+     }
+     if (totAssistA > totGoalA) {
+       alert("Error: total assist from players (Team A) are higher than total goals scored from players (Team A)!");
+       return;
+     }
+     if (totGoalB > resultTeamB) {
+       alert("Error: total goal scored from players (Team B) are higher than Team B score!");
+       return;
+     }
+     if (totAssistB > resultTeamB) {
+       alert("Error: total assist from players (Team B) are higher than Team B score!");
+       return;
+     }
+     if (totAssistB > totGoalB) {
+       alert("Error: total assist from players (Team B) are higher than total goals scored from players (Team B)!");
+       return;
+     } */
 
     /* if (totCSA > 1) {
       alert("Error: there is more than one cleansheet for players in Team A!");
