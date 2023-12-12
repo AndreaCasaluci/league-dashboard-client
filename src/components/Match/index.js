@@ -103,10 +103,11 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                         {statsTeamA.map((stats, statsIndex) => (
                             <div key={statsIndex} className="player-stats">
                                 <p className='player-name'>{stats.player}:</p>
-                                <p> <FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s </p>
-                                {stats.goal ? <p> <FontAwesomeIcon icon={faFutbol} /> {stats.goal} </p> : null}
-                                {stats.assist ? <p> <FontAwesomeIcon icon={faHandshake} /> {stats.assist} </p> : null}
-                                {stats.cleansheet > 0 ? <p> <FontAwesomeIcon icon={faMitten} /> {stats.cleansheet} CS</p> : null}
+                                {/* <p> <FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s </p> */}
+                                {stats.goal ? <p> <FontAwesomeIcon icon={faFutbol} /> {stats.goal}G </p> : null}
+                                {stats.assist ? <p> <FontAwesomeIcon icon={faHandshake} /> {stats.assist}A </p> : null}
+                                {stats.cleansheet > 0 ? <p> <FontAwesomeIcon icon={faMitten} /> {stats.cleansheet}CS </p> : null}
+                                <p> {"("}<FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s{")"} </p>
                             </div>
                         ))}
                     </div>
@@ -115,10 +116,11 @@ function Match({ teamAName, teamBName, matchStatus, result, statsTeamA, statsTea
                         {statsTeamB.map((stats, statsIndex) => (
                             <div key={statsIndex} className="player-stats">
                                 <p className='player-name'>{stats.player}:</p>
-                                <p> <FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s </p>
-                                {stats.goal ? <p> <FontAwesomeIcon icon={faFutbol} /> {stats.goal} </p> : null}
-                                {stats.assist ? <p> <FontAwesomeIcon icon={faHandshake} /> {stats.assist} </p> : null}
-                                {stats.cleansheet > 0 ? <p> <FontAwesomeIcon icon={faMitten} /> {stats.cleansheet} CS</p> : null}
+                                {/* <p> <FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s </p> */}
+                                {stats.goal ? <p> <FontAwesomeIcon icon={faFutbol} /> {stats.goal}G </p> : null}
+                                {stats.assist ? <p> <FontAwesomeIcon icon={faHandshake} /> {stats.assist}A </p> : null}
+                                {stats.cleansheet > 0 ? <p> <FontAwesomeIcon icon={faMitten} /> {stats.cleansheet}CS</p> : null}
+                                <p> {"("}<FontAwesomeIcon icon={faStopwatch} /> {stats.playtime}s{")"} </p>
                             </div>
                         ))}
                     </div>
