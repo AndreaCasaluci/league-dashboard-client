@@ -11,11 +11,32 @@
     margin-bottom: 10px;
     padding: 10px;
     box-shadow: 0px 0px 5px 5px #2f2f2fe6;
+    overflow: hidden;
 }
 
 .match-container:hover {
     transition: 0.2s;
     box-shadow: 0px 0px 6px 6px #222222e6;
+}
+
+
+
+.team-stats:first-of-type {
+    width: 500px;
+}
+
+.team-stats:first-of-type .player-name {
+    font-weight: bold;
+    color: rgb(255, 127, 127)
+}
+
+.team-stats:last-of-type .player-name {
+    font-weight: bold;
+    color: rgb(127, 187, 255)
+}
+
+.team-stats:last-of-type {
+    width: 500px;
 }
 
 .match-info {
@@ -141,13 +162,17 @@ h4 {
     color: white;
 }
 
+
 .match-container .player-stats {
     align-self: center;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     display: flex;
     gap: 4px;
+    width: 400px;
+    margin-left: 200px;
+    margin-right: 100px;
 }
 
 .match-container .left-wildcard-defwin {
