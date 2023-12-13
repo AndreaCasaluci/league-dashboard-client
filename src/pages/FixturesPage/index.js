@@ -14,6 +14,7 @@ const FixturesPage = () => {
 
     useEffect(() => {
         actions.fetchMatchdays(setMatches, setMatchdayDates);
+        console.log(matchdayDates);
     }, []);
 
     const groupMatchesByMatchday = () => {
@@ -44,7 +45,7 @@ const FixturesPage = () => {
                 <div key={matchday} className="matchday-container">
                     {/* <h3>Matchday {matchday}</h3> */}
                     <div className='matchday-title'>
-                        <div className='left-date'>{matchdayDates[matchday - 1].date}</div>
+                        <div className='left-date'>{matchdayDates[matchday - 1] ? matchdayDates[matchday - 1] : null}</div>
                         <div className='central-title'>
                             <p className='inner-title'>Matchday {matchday}</p>
                         </div>

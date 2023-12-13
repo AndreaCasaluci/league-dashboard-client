@@ -157,8 +157,13 @@ const fetchMatchdays = async (setMatchdays, setMatchdayDates) => {
         const response2 = await fetch('https://competitivefutsal.it:8443/match/matchdayDates');
         if (response.ok) {
             const data2 = await response2.json();
-            console.log(data2);
-            setMatchdayDates(data2);
+
+            const matchdayDatesArray = new Array();
+            for (let tmpMatchdayDate of data2) {
+                matchdayDatesArray.push(tmpMatchdayDate.date);
+            }
+            console.log(matchdayDatesArray);
+            setMatchdayDates(matchdayDatesArray);
         } else {
             console.error('Errore nel recupero dei dati MatchdayDates');
         }
