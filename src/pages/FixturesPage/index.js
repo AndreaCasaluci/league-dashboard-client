@@ -10,9 +10,10 @@ import { faPlay, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 const FixturesPage = () => {
     const [matches, setMatches] = useState([]);
     const [expandedMatch, setExpandedMatch] = useState(null);
+    const [matchdayDates, setMatchdayDates] = useState([]);
 
     useEffect(() => {
-        actions.fetchMatchdays(setMatches);
+        actions.fetchMatchdays(setMatches, setMatchdayDates);
     }, []);
 
     const groupMatchesByMatchday = () => {
@@ -43,7 +44,11 @@ const FixturesPage = () => {
                 <div key={matchday} className="matchday-container">
                     {/* <h3>Matchday {matchday}</h3> */}
                     <div className='matchday-title'>
-                        <p className='inner-title'>Matchday {matchday}</p>
+                        <div className='left-date'>{matchdayDates[matchday - 1].date}</div>
+                        <div className='central-title'>
+                            <p className='inner-title'>Matchday {matchday}</p>
+                        </div>
+                        <div className='right-empty'></div>
                     </div>
                     <div className='matches'>
                         {matches.map((match, matchIndex) => (

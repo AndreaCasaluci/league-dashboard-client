@@ -58,11 +58,11 @@ h3 {
     font-weight: bolder;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-right: 20px;
 }
 
-.inner-title {}
+
 
 .matches {
     display: flex;
@@ -159,4 +159,20 @@ h4 {
     width: 23px;
     height: 23px;
     vertical-align: middle;
+}
+
+.matchday-title .left-date {
+    width: 300px;
+    color: #ccc;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.matchday-title .central-title {}
+
+.matchday-title .right-empty {
+    width: 300px;
 }

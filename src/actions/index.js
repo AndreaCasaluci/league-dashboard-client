@@ -143,7 +143,7 @@ const fetchTOTW = async (setTeamOfTheWeeks, setSelectedWeek) => {
     }
 }
 
-const fetchMatchdays = async (setMatchdays) => {
+const fetchMatchdays = async (setMatchdays, setMatchdayDates) => {
     try {
         const response = await fetch('https://competitivefutsal.it:8443/match/matchdays');
         if (response.ok) {
@@ -153,8 +153,17 @@ const fetchMatchdays = async (setMatchdays) => {
         } else {
             console.error('Errore nel recupero dei dati Matchdays');
         }
+
+        const response2 = await fetch('https://competitivefutsal.it:8443/match/matchdayDates');
+        if (response.ok) {
+            const data2 = await response2.json();
+            console.log(data2);
+            setMatchdayDates(data2);
+        } else {
+            console.error('Errore nel recupero dei dati MatchdayDates');
+        }
     } catch (error) {
-        console.error('Errore nel recupero dei dati Matchdays:', error);
+        console.error('Errore nel recupero dei dati MatchdayDates:', error);
     }
 }
 
