@@ -117,6 +117,17 @@ const fetchPlayersByTeam = async (teamX, setPlayersTeamX, setStatsTeamX) => {
     setStatsTeamX({});
 }
 
+const fetchPlayersStatsByTeam = async (teamX, setPlayersAndStats) => {
+    // Effettua una richiesta al backend per ottenere la lista dei giocatori del team A
+    fetch(`https://competitivefutsal.it:8443/player/playersStatsByTeam/${teamX}`)
+        .then((response) => response.json())
+        .then((data) => setPlayersAndStats(data))
+        .catch((error) => console.error('Errore nel recupero dei giocatori:', error));
+
+    // Inizializza le statistiche del team A quando selezioni un nuovo team
+
+}
+
 const fetchPlayersWithNoTeam = async (setPlayersWithoutTeam) => {
     fetch('https://competitivefutsal.it:8443/player/playersWithoutTeam')
         .then((response) => response.json())
@@ -148,7 +159,6 @@ const fetchMatchdays = async (setMatchdays, setMatchdayDates) => {
         const response = await fetch('https://competitivefutsal.it:8443/match/matchdays');
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
             setMatchdays(data);
         } else {
             console.error('Errore nel recupero dei dati Matchdays');
@@ -162,7 +172,6 @@ const fetchMatchdays = async (setMatchdays, setMatchdayDates) => {
             for (let tmpMatchdayDate of data2) {
                 matchdayDatesArray.push(tmpMatchdayDate.date);
             }
-            console.log(matchdayDatesArray);
             setMatchdayDates(matchdayDatesArray);
         } else {
             console.error('Errore nel recupero dei dati MatchdayDates');
@@ -172,6 +181,17 @@ const fetchMatchdays = async (setMatchdays, setMatchdayDates) => {
     }
 }
 
+const fetchPlayedMatchesByTeam = async (teamX, setPlayedMatches) => {
+    // Effettua una richiesta al backend per ottenere la lista dei giocatori del team A
+    fetch(`https://competitivefutsal.it:8443/match/playedMatchesByTeam/${teamX}`)
+        .then((response) => response.json())
+        .then((data) => { setPlayedMatches(data) })
+        .catch((error) => console.error('Errore nel recupero dei giocatori:', error));
+
+    // Inizializza le statistiche del team A quando selezioni un nuovo team
+
+}
 
 
-export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW, fetchMatchdays, fetchAllTeams }
+
+export default { fetchPlayers, fetchData, fetchTeams, fetchPlayersByTeam, fetchPlayersWithNoTeam, fetchTOTW, fetchMatchdays, fetchAllTeams, fetchPlayersStatsByTeam, fetchPlayedMatchesByTeam }

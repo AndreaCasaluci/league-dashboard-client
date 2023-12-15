@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faUsers, faCalendarAlt, faTrophy } from '@fortawesome/free-solid-svg-icons';
 import './index.css'; // Importa il tuo file CSS
 
-const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, logoFileName, leaderboardPosition }) => {
+const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, logoFileName, leaderboardPosition, onClick }) => {
   /* const teamLogoPath = require(`/teamLogos/${logoFileName}`); */
   const captainIconPath = require(`./captain_icon.png`);
   const date = new Date(foundationDate);
@@ -14,7 +14,7 @@ const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, log
   const isPlayerLenghtAboveZero = players.length > 0;
 
   return (
-    <div className="team-card">
+    <div className="team-card" onClick={() => onClick(shortName)}>
       <div className='short-name'>{shortName}</div>
       {/* <h3 className='team-title'>
         {teamName}
@@ -48,24 +48,26 @@ const TeamCard = ({ teamName, shortName, players, foundationDate, totalCost, log
         </div>
       </div>
 
-      {isPlayerLenghtAboveZero ? (<div className="players-list">
-        <div className='players-title'><strong>Players:</strong></div>
-        <ul>
-          {players.map((player, index) => (
-            <li key={index}>
-              {index === 0 ? (
-                <>
-                  {player}
-                  <span className="captain-icon"><img src={captainIconPath} className='captain-icon'></img></span>
-                </>
-              ) : (
-                player
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>) : null}
-    </div>
+      {
+        isPlayerLenghtAboveZero ? (<div className="players-list">
+          <div className='players-title'><strong>Players:</strong></div>
+          <ul>
+            {players.map((player, index) => (
+              <li key={index}>
+                {index === 0 ? (
+                  <>
+                    {player}
+                    <span className="captain-icon"><img src={captainIconPath} className='captain-icon'></img></span>
+                  </>
+                ) : (
+                  player
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>) : null
+      }
+    </div >
   );
 };
 

@@ -1,0 +1,110 @@
+.mini-match {
+    display: flex;
+    /* border: 2px solid magenta; */
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.left-team2 {
+    width: 100px;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.result2 {
+    width: 35px;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result2-win {
+    width: 35px;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: greenyellow;
+}
+
+.result2-draw {
+    width: 35px;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+.result2-lose {
+    width: 35px;
+    /* border: 2px solid blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(205, 67, 67);
+}
+
+
+.right-team2 {
+    width: 100px;
+    /* border: 2px solid gold; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.mini-logo2-left {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.mini-logo2-left img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-logo2-right {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.mini-logo2-right img {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.short-name2 {
+    width: 33px;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 3px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

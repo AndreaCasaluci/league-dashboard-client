@@ -14,7 +14,6 @@ const FixturesPage = () => {
 
     useEffect(() => {
         actions.fetchMatchdays(setMatches, setMatchdayDates);
-        console.log(matchdayDates);
     }, []);
 
     const groupMatchesByMatchday = () => {
