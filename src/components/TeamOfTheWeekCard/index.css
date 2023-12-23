@@ -7,8 +7,8 @@
   padding: 10px;
   margin: 10px;
   text-align: center;
-  width: 142px;
-  height: 201px;
+  width: 150px;
+  height: 220px;
   flex-shrink: 0;
   /* background: linear-gradient(151deg, #4E5AF4 23.32%, rgba(33, 12, 120, 0.00) 137.29%); */
   background-image: linear-gradient(to right bottom, #39b8a7, #00acc1, #009cdf, #2663eb, #2663eb);
@@ -76,7 +76,7 @@
 }
 
 .bottom {
-  padding-top: 16px;
+  padding-top: 25px;
   font-size: 18px;
   font-weight: bolder;
   text-align: center;

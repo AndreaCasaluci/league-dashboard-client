@@ -7,7 +7,6 @@ import './index.css';
 const GoalLeaderboard = ({ classifica }) => {
   // Clona l'array classifica
   var goalPerMatchLeaderboard = [...classifica];
-
   // Filtra e ordina il nuovo array
   goalPerMatchLeaderboard = goalPerMatchLeaderboard
     .filter((player) => player.matches !== 0 && player.goal > 0)
