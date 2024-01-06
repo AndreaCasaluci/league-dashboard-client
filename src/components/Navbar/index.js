@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFutbol, faTrophy, faHandshake, faMitten, faPersonRunning, faPeopleGroup, faRankingStar, faHouse, faCalendarDays, faScrewdriverWrench, faAward } from '@fortawesome/free-solid-svg-icons';
+import { faFutbol, faTrophy, faHandshake, faMitten, faPersonRunning, faPeopleGroup, faRankingStar, faCalendarDays, faScrewdriverWrench, faAward, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 //@fortawesome/fontawesome-svg-core
@@ -51,6 +51,9 @@ const Navbar = ({ setSection, activeSection }) => {
           <li onClick={() => handleSectionChange('TOTW')} className={activeSection === 'TOTW' ? 'active' : ''}>
             <FontAwesomeIcon icon={faAward} className="fa-icon" />Team Of The Week
           </li>
+          {/* <li onClick={() => handleSectionChange('PlayOff')} className={activeSection === 'PlayOff' ? 'active' : ''}>
+            <FontAwesomeIcon icon={faStar} className="fa-icon" />PlayOff
+          </li> */}
           <li onClick={() => handleSectionChange('AdminPanel')} className={activeSection === 'AdminPanel' ? 'active' : ''}>
             <FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon' />Admin Panel
           </li>

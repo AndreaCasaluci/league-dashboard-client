@@ -1,0 +1,70 @@
+.playoff-match-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #58595e;
+    height: 25px;
+}
+
+.row:first-of-type {
+    border-bottom: 2px solid #333;
+}
+
+.logo-box {
+    width: 25px;
+    height: 25px;
+    border: 1px solid red;
+    margin-left: 3px;
+}
+
+.playoff-match-container .team-name {
+    width: 85%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    /* border: 1px solid yellowgreen; */
+    text-align: center;
+    height: 25px;
+}
+
+.score {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #58595e;
+    font-weight: bold;
+    /* border: 1px solid aqua; */
+    background-color: #ccc;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+}
+
+.score-win {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #58595e;
+    font-weight: bold;
+    /* border: 1px solid aqua; */
+    /* background-color: #00e5ff; */
+    background-image: linear-gradient(to right bottom, #5140f0, rgb(120, 105, 255), #009cdf, #00acc1, #39b8a7);
+    color: white;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+}

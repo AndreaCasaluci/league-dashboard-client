@@ -18,6 +18,7 @@ import TeamOfTheWeekPage from './pages/TeamOfTheWeekPage';
 import Loading from './components/Loading';
 
 import actions from './actions';
+import PlayOffPage from './pages/PlayOffPage';
 
 function App() {
   const [section, setSection] = useState('LeagueLeaderboard');
@@ -146,6 +147,15 @@ function App() {
             <Navbar setSection={setSection} />
             <div className='content'>
               <FixturesPage />
+            </div>
+          </div>
+        )
+      case "PlayOff":
+        return (
+          <div className='App'>
+            <Navbar setSection={setSection} />
+            <div className='content'>
+              <PlayOffPage />
             </div>
           </div>
         )
