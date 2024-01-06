@@ -51,9 +51,9 @@ const Navbar = ({ setSection, activeSection }) => {
           <li onClick={() => handleSectionChange('TOTW')} className={activeSection === 'TOTW' ? 'active' : ''}>
             <FontAwesomeIcon icon={faAward} className="fa-icon" />Team Of The Week
           </li>
-          {/* <li onClick={() => handleSectionChange('PlayOff')} className={activeSection === 'PlayOff' ? 'active' : ''}>
+          <li onClick={() => handleSectionChange('PlayOff')} className={activeSection === 'PlayOff' ? 'active' : ''}>
             <FontAwesomeIcon icon={faStar} className="fa-icon" />PlayOff
-          </li> */}
+          </li>
           <li onClick={() => handleSectionChange('AdminPanel')} className={activeSection === 'AdminPanel' ? 'active' : ''}>
             <FontAwesomeIcon icon={faScrewdriverWrench} className='fa-icon' />Admin Panel
           </li>

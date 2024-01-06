@@ -38,15 +38,13 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 100px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 100px;
-  padding-right: 100px;
   border-radius: 28px;
   background: #333;
-  width: 760px;
+  min-width: 1000px;
   height: 400px;
   flex-shrink: 0;
   /* padding-top: 126px; */
@@ -74,7 +72,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 20px;
   width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .title-header {

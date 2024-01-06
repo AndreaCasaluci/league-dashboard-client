@@ -42,13 +42,15 @@ const TeamOfTheWeekPage = () => {
           .map((week) => (
             <div key={week.weekNumber} className="team-of-the-week-container">
               {week.players.map((player) => (
-                <TeamOfTheWeekCard
-                  key={player.name}
-                  role={player.role}
-                  teamLogo={player.teamLogo}
-                  playerAvatar={player.avatar}
-                  playerName={player.name}
-                />
+                <div className='tmp-totw-card'>
+                  <TeamOfTheWeekCard
+                    key={player.name}
+                    role={player.role}
+                    teamLogo={player.teamLogo}
+                    playerAvatar={player.avatar}
+                    playerName={player.name}
+                  />
+                </div>
               ))}
             </div>
           ))}
